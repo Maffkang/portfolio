@@ -21,25 +21,25 @@ export function CaseServicesAccordion({
         {services.map((service) => {
           const isOpen = openTitle === service.title;
           return (
-            <div key={service.title} className="bg-surface">
+            <div key={service.title} className="bg-white">
               <button
                 type="button"
                 onClick={() => setOpenTitle(isOpen ? null : service.title)}
                 aria-expanded={isOpen}
-                className="flex w-full items-center justify-between gap-4 px-4 py-4 text-left lg:px-8"
+                className="group flex w-full items-center justify-between gap-4 px-4 py-4 text-left lg:px-8"
               >
                 <span className="font-mono text-sm tracking-tight text-body lg:text-2xl">
                   {service.title}
                 </span>
                 <ChevronRightIcon
-                  className={`size-6 shrink-0 text-body transition-transform duration-200 lg:size-14 ${
+                  className={`size-6 shrink-0 text-body transition-transform duration-200 group-hover:translate-x-1 lg:size-14 ${
                     isOpen ? "rotate-90" : ""
                   }`}
                 />
               </button>
               {isOpen && (
                 <div className="flex flex-col gap-4 px-4 pb-4 lg:px-8 lg:pb-8">
-                  <p className="font-mono text-xs tracking-tight text-body/80 lg:text-sm">
+                  <p className="font-mono text-xs tracking-tight text-body/80 lg:text-base">
                     {service.description}
                   </p>
                   <Image

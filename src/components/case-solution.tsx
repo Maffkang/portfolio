@@ -7,8 +7,8 @@ export function CaseSolution({ detail }: { detail: CaseDetail }) {
       <h2 className="font-sans text-xl font-medium tracking-tight text-body lg:text-4xl">
         Решение
       </h2>
-      <div className="flex flex-col gap-4 bg-surface p-4 lg:flex-row lg:items-center lg:gap-8">
-        <div className="flex flex-col gap-2 font-mono text-xs tracking-tight text-body/80 lg:w-1/2 lg:shrink-0 lg:text-sm">
+      <div className="flex flex-col gap-4 bg-white p-4 lg:flex-row lg:items-center lg:gap-8">
+        <div className="flex flex-col gap-2 font-mono text-xs tracking-tight text-body/80 lg:w-1/2 lg:shrink-0 lg:text-base">
           {detail.solution.paragraphs.map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
           ))}

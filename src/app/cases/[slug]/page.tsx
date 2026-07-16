@@ -24,7 +24,7 @@ export default async function CasePage({
   const detail = caseDetails[slug];
 
   return (
-    <div className="flex min-h-screen flex-col overflow-x-clip bg-white font-sans text-body">
+    <div className="flex min-h-screen flex-col overflow-x-clip bg-surface font-sans text-body">
       <SiteHeader />
       {detail ? (
         <main className="flex-1">
