@@ -83,7 +83,7 @@ export type CaseDetail = {
   role: string;
   tags: string[];
   heroBanner: {
-    desktop: CaseImage;
+    desktopBackground: CaseImage;
     mobile: CaseImage;
   };
   intro: {
@@ -107,8 +107,8 @@ export const caseDetails: Partial<Record<string, CaseDetail>> = {
     role: "UX/UI & Product designer",
     tags: ["UX/UI", "Product design", "Fintech design", "Acquire service"],
     heroBanner: {
-      desktop: {
-        src: "/images/cases/cycle/hero-banner-desktop.webp",
+      desktopBackground: {
+        src: "/images/cases/cycle/hero-bg-desktop.webp",
         width: 1360,
         height: 349,
       },
