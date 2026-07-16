@@ -5,6 +5,7 @@ import { CaseIntro } from "@/components/case-intro";
 import { CaseSolution } from "@/components/case-solution";
 import { CaseServicesAccordion } from "@/components/case-services-accordion";
 import { CaseResultBox } from "@/components/case-result-box";
+import { CaseRoleResult } from "@/components/case-role-result";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { caseDetails, cases } from "@/data/cases";
@@ -29,18 +30,27 @@ export default async function CasePage({
       <SiteHeader />
       {detail ? (
         <main className="flex-1">
-          <div className="mx-auto flex w-full max-w-[1360px] flex-col gap-18 px-6 py-10 sm:px-10 lg:py-16">
+          <div className="mx-auto flex w-full max-w-[1360px] flex-col gap-18 px-6 pt-10 pb-36 sm:px-10 lg:pt-16">
             <CaseHero item={item} detail={detail} />
             <CaseIntro heading={detail.introHeading} rows={detail.introRows} />
-            <CaseSolution
-              heading={detail.solutionHeading}
-              paragraphs={detail.solutionParagraphs}
-              image={detail.solutionImage}
-            />
-            <CaseServicesAccordion
-              heading={detail.accordionHeading}
-              items={detail.accordionItems}
-            />
+            {detail.solutionHeading &&
+              detail.solutionParagraphs &&
+              detail.solutionImage && (
+                <CaseSolution
+                  heading={detail.solutionHeading}
+                  paragraphs={detail.solutionParagraphs}
+                  image={detail.solutionImage}
+                />
+              )}
+            {detail.roleResultSection && (
+              <CaseRoleResult section={detail.roleResultSection} />
+            )}
+            {detail.accordionHeading && detail.accordionItems && (
+              <CaseServicesAccordion
+                heading={detail.accordionHeading}
+                items={detail.accordionItems}
+              />
+            )}
             {detail.resultParagraphs && (
               <CaseResultBox paragraphs={detail.resultParagraphs} />
             )}

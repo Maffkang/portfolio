@@ -36,6 +36,8 @@ function HeroContent({
   );
 }
 
+const DEFAULT_MOBILE_HERO_GAP = 32;
+
 export function CaseHero({
   item,
   detail,
@@ -68,7 +70,12 @@ export function CaseHero({
           className="object-cover"
           priority
         />
-        <div className="relative flex flex-col gap-8 p-8">
+        <div
+          className="absolute top-8 left-8 right-8 flex flex-col"
+          style={{
+            gap: `${detail.heroBanner.mobileContentGap ?? DEFAULT_MOBILE_HERO_GAP}px`,
+          }}
+        >
           <HeroContent item={item} detail={detail} />
         </div>
       </div>

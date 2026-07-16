@@ -86,6 +86,16 @@ export type CaseAccordionItem = {
   images: CaseImage[];
 };
 
+export type CaseRoleResultSection = {
+  heading: string;
+  roleTitle: string;
+  roleList: string[];
+  resultTitle: string;
+  resultParagraphs: string[];
+  ctaLabel: string;
+  ctaHref: string;
+};
+
 export type CaseDetail = {
   tagline: string;
   role: string;
@@ -93,17 +103,21 @@ export type CaseDetail = {
   heroBanner: {
     desktopBackground: CaseImage;
     mobileBackground: CaseImage;
+    /** Gap (px) between the text block and the tags row in the mobile banner. Defaults to 32. */
+    mobileContentGap?: number;
   };
   introHeading: string;
   /** Each entry is a row of 1-2 cards rendered side by side (desktop) / stacked (mobile). */
   introRows: CaseTextCard[][];
-  solutionHeading: string;
-  solutionParagraphs: string[];
-  solutionImage: CaseImage;
-  accordionHeading: string;
-  accordionItems: CaseAccordionItem[];
+  solutionHeading?: string;
+  solutionParagraphs?: string[];
+  solutionImage?: CaseImage;
+  accordionHeading?: string;
+  accordionItems?: CaseAccordionItem[];
   /** Optional tinted highlight box shown after the accordion (e.g. a results summary). */
   resultParagraphs?: string[];
+  /** Alternate "Решение" layout: a bullet list card next to a tinted result card + CTA button. */
+  roleResultSection?: CaseRoleResultSection;
 };
 
 export const caseDetails: Partial<Record<string, CaseDetail>> = {
@@ -431,5 +445,58 @@ export const caseDetails: Partial<Record<string, CaseDetail>> = {
       "В результате получается понятный интерфейс, который упрощает сложные финансовые процессы. Виджет легко интегрируется в банковскую среду, не нарушая ее логику.",
       "Упрощенные потоки и прозрачная информация помогают пользователям принимать решения с большей уверенностью. Проект также позволил быстро запустить MVP и заложил прочную основу для будущего масштабирования благодаря хорошо структурированному пользовательскому интерфейсу и системе дизайна.",
     ],
+  },
+  "travel-card": {
+    tagline:
+      "Запуск сервиса оформления зарубежных банковских карт для пользователей из РФ в условиях жёстких сроков, где нужно было быстро собрать понятный и доверительный пользовательский опыт для сложного финансового процесса",
+    role: "UX/UI & Product designer",
+    tags: ["UX/UI", "Product design", "AI"],
+    heroBanner: {
+      desktopBackground: {
+        src: "/images/cases/travel-card/hero-bg-desktop.webp",
+        width: 1360,
+        height: 349,
+      },
+      mobileBackground: {
+        src: "/images/cases/travel-card/hero-bg-mobile.webp",
+        width: 370,
+        height: 477,
+      },
+      mobileContentGap: 16,
+    },
+    introHeading: "Вводные данные",
+    introRows: [
+      [
+        {
+          title: "Моя роль и вклад",
+          paragraphs: [
+            "Я отвечал за дизайн продукта с нуля: от первых концептов до передачи макетов в разработку в сжатые сроки. Включался в проект на этапе, когда нужно было быстро собрать рабочий MVP, и выстроил ключевые пользовательские сценарии, интерфейс и визуальную логику продукта. Черновую основу интерфейса собрал с помощью AI-инструментов, после чего доработал её вручную и подготовил к продакшену. За 7–10 дней закрыл весь дизайн-контур: основные экраны, анкеты, баннеры и коммуникационные материалы.",
+          ],
+        },
+        {
+          title: "Проблема",
+          paragraphs: [
+            "Продукт решает нетривиальную задачу — оформление зарубежных банковских карт для пользователей из РФ, где процесс сам по себе сложный, многошаговый и требует доверия. При этом запуск нужно было сделать максимально быстро, без долгого ресёрча и классического продуктового цикла. Не было готовой дизайн-системы, структуры продукта и проверенных сценариев, всё нужно было собирать параллельно с разработкой. Главное было упростить сложный финансовый процесс и упаковать его в понятный пользовательский путь в условиях жёстких сроков.",
+          ],
+        },
+      ],
+    ],
+    roleResultSection: {
+      heading: "Решение",
+      roleTitle: "Моя роль и вклад",
+      roleList: [
+        "Быстро собрал черновую визуальную основу продукта с помощью AI, чтобы сократить время на старт и сразу перейти к рабочему направлению",
+        "Доработал интерфейс вручную: уточнил структуру экранов, пользовательские сценарии и привёл всё к цельному и понятному виду",
+        "Спроектировал основные страницы продукта и ключевые шаги пользователя, включая анкету и базовый путь оформления",
+        "Подготовил дополнительные материалы для запуска: баннеры, письма и сопутствующие элементы коммуникации",
+        "Передал макеты в разработку в сжатые сроки, чтобы команда могла быстро собрать и выпустить MVP",
+      ],
+      resultTitle: "Результат",
+      resultParagraphs: [
+        "Продукт решает нетривиальную задачу — оформление зарубежных банковских карт для пользователей из РФ, где процесс сам по себе сложный, многошаговый и требует доверия. При этом запуск нужно было сделать максимально быстро, без долгого ресёрча и классического продуктового цикла. Не было готовой дизайн-системы, структуры продукта и проверенных сценариев, всё нужно было собирать параллельно с разработкой. Главное было упростить сложный финансовый процесс и упаковать его в понятный пользовательский путь в условиях жёстких сроков.",
+      ],
+      ctaLabel: "Перейти на сайт travel card",
+      ctaHref: "https://travelcard.my2can.com",
+    },
   },
 };
