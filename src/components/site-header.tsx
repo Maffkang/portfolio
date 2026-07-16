@@ -1,4 +1,4 @@
-import { socialLinks } from "@/data/cases";
+import { profile, socialLinks } from "@/data/cases";
 import { MobileSocialMenu } from "@/components/mobile-social-menu";
 
 export function SiteHeader() {
@@ -24,35 +24,42 @@ export function SiteHeader() {
       </div>
 
       <div className="hidden bg-white/80 backdrop-blur-sm lg:block">
-        <div className="mx-auto flex max-w-[1360px] flex-wrap items-center justify-between gap-x-4 gap-y-2 px-6 py-4 sm:px-10">
-          <div className="flex items-center gap-2">
-            <button
-              type="button"
-              className="bg-main px-6 py-3 font-mono text-sm tracking-tight text-white"
-            >
-              ENG
-            </button>
-            <a
-              href="/cv/marchenko-andrey-cv.pdf"
-              download
-              className="bg-main px-6 py-3 font-mono text-sm tracking-tight text-white"
-            >
-              Скачать CV
-            </a>
-          </div>
-          <nav className="flex items-center gap-4 font-mono text-sm tracking-tight text-body">
-            {socialLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                target={link.label === "Email" ? undefined : "_blank"}
-                rel={link.label === "Email" ? undefined : "noopener noreferrer"}
-                className="hover:text-main"
+        <div className="mx-auto flex max-w-[1360px] items-center justify-between px-6 py-4 sm:px-10">
+          <p className="font-sans text-lg font-medium tracking-tight text-black">
+            {profile.name}
+          </p>
+          <div className="flex items-center gap-16">
+            <nav className="flex items-center gap-8 font-mono text-base tracking-tight text-body">
+              {socialLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target={link.label === "Email" ? undefined : "_blank"}
+                  rel={
+                    link.label === "Email" ? undefined : "noopener noreferrer"
+                  }
+                  className="hover:text-main"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </nav>
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                className="bg-main px-6 py-3 font-mono text-base tracking-tight text-white"
               >
-                {link.label}
+                ENG
+              </button>
+              <a
+                href="/cv/marchenko-andrey-cv.pdf"
+                download
+                className="bg-main px-6 py-3 font-mono text-base tracking-tight text-white"
+              >
+                Скачать CV
               </a>
-            ))}
-          </nav>
+            </div>
+          </div>
         </div>
       </div>
     </header>
