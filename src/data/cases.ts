@@ -82,7 +82,10 @@ export type CaseDetail = {
   tagline: string;
   role: string;
   tags: string[];
-  heroImage: CaseImage;
+  heroBanner: {
+    desktop: CaseImage;
+    mobile: CaseImage;
+  };
   intro: {
     context: string;
     myRole: string;
@@ -103,10 +106,17 @@ export const caseDetails: Partial<Record<string, CaseDetail>> = {
       "Проекты и задачи в рамках компании Cycle Bit, демонстрируя мою роль в продуктовом и UX/UI дизайне.",
     role: "UX/UI & Product designer",
     tags: ["UX/UI", "Product design", "Fintech design", "Acquire service"],
-    heroImage: {
-      src: "/images/cases/cycle/hero.webp",
-      width: 700,
-      height: 700,
+    heroBanner: {
+      desktop: {
+        src: "/images/cases/cycle/hero-banner-desktop.webp",
+        width: 1360,
+        height: 349,
+      },
+      mobile: {
+        src: "/images/cases/cycle/hero-banner-mobile.webp",
+        width: 370,
+        height: 477,
+      },
     },
     intro: {
       context:
