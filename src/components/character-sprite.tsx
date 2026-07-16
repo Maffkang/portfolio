@@ -9,10 +9,10 @@ import { useEffect, useRef } from "react";
 // all, just WebP decoding, which every modern browser (including Safari)
 // handles with real alpha.
 const SPRITE_SRC = "/videos/character-sprite.webp";
-const COLS = 13;
-const FRAME_COUNT = 146;
-const FRAME_SIZE = 320;
-const FPS = 10;
+const COLS = 11;
+const FRAME_COUNT = 117;
+const FRAME_SIZE = 360;
+const FPS = 8;
 
 export function CharacterSprite({ className }: { className?: string }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
