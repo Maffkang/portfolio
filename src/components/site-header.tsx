@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { profile, socialLinks } from "@/data/cases";
 import { MobileSocialMenu } from "@/components/mobile-social-menu";
 
@@ -25,9 +26,12 @@ export function SiteHeader() {
 
       <div className="hidden bg-white/80 backdrop-blur-sm lg:block">
         <div className="mx-auto flex max-w-[1360px] items-center justify-between px-6 py-4 sm:px-10">
-          <p className="font-sans text-lg font-medium tracking-tight text-black">
+          <Link
+            href="/"
+            className="font-sans text-lg font-medium tracking-tight text-black"
+          >
             {profile.name}
-          </p>
+          </Link>
           <div className="flex items-center gap-16">
             <nav className="flex items-center gap-8 font-mono text-base tracking-tight text-body">
               {socialLinks.map((link) => (
