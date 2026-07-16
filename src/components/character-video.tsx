@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { CharacterSprite } from "@/components/character-sprite";
 
 // The source video encodes transparency as WebM/VP9 alpha, but some mobile
 // browsers (notably iOS Safari) decode the video without compositing that
@@ -9,11 +10,9 @@ import { useEffect, useRef, useState } from "react";
 //
 // We feature-detect this by drawing an early frame over a magenta probe
 // canvas: if a corner that should be transparent still comes back green,
-// the browser isn't honoring alpha. Reconstructing per-pixel transparency
-// from that baked-in green ourselves is lossy (compression noise around
-// moving edges keys inconsistently), so rather than show a glitchy result
-// we fall back to the static (properly alpha-encoded) poster image on
-// browsers that can't play the video with real transparency.
+// the browser isn't honoring alpha. On those browsers we play a
+// pre-rendered WebP frame sprite instead (see character-sprite.tsx), which
+// keeps the animation without depending on video alpha support.
 const GREEN_MATCH_TOLERANCE = 40;
 
 function isGreenScreen(r: number, g: number, b: number) {
@@ -69,15 +68,7 @@ export function CharacterVideo({ className }: { className?: string }) {
       >
         <source src="/videos/lego-alpha.webm" type="video/webm" />
       </video>
-      {!supportsAlpha && (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src="/images/lego-poster.webp"
-          alt=""
-          aria-hidden="true"
-          className={className}
-        />
-      )}
+      {!supportsAlpha && <CharacterSprite className={className} />}
     </>
   );
 }
