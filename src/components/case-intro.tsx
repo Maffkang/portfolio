@@ -27,20 +27,21 @@ export function CaseIntro({ detail }: { detail: CaseDetail }) {
       </div>
       <div className="h-px w-full bg-grey" />
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8">
-        <div className="flex flex-col gap-4 bg-white p-4">
-          <h3 className="font-sans text-lg font-medium tracking-tight text-body lg:text-xl">
-            Проблема
-          </h3>
-          <p className="font-mono text-xs tracking-tight text-body/80 lg:text-base">
-            {detail.intro.problem}
-          </p>
-          <div className="relative w-full">
+        <div className="flex flex-col gap-2.5 bg-white p-4 lg:gap-4">
+          <div className="flex flex-col gap-4">
+            <h3 className="font-sans text-lg font-medium tracking-tight text-body lg:text-xl">
+              Проблема
+            </h3>
+            <p className="font-mono text-xs tracking-tight text-body/80 lg:text-base">
+              {detail.intro.problem}
+            </p>
+          </div>
+          <div className="relative aspect-[3246/2288] w-full">
             <Image
               src={detail.intro.problemImage.src}
               alt=""
-              width={detail.intro.problemImage.width}
-              height={detail.intro.problemImage.height}
-              className="h-auto w-full object-cover"
+              fill
+              className="object-cover"
             />
           </div>
         </div>

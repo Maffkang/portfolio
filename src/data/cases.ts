@@ -84,7 +84,7 @@ export type CaseDetail = {
   tags: string[];
   heroBanner: {
     desktopBackground: CaseImage;
-    mobile: CaseImage;
+    mobileBackground: CaseImage;
   };
   intro: {
     context: string;
@@ -112,8 +112,8 @@ export const caseDetails: Partial<Record<string, CaseDetail>> = {
         width: 1360,
         height: 349,
       },
-      mobile: {
-        src: "/images/cases/cycle/hero-banner-mobile.webp",
+      mobileBackground: {
+        src: "/images/cases/cycle/hero-bg-mobile.webp",
         width: 370,
         height: 477,
       },

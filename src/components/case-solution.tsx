@@ -7,19 +7,18 @@ export function CaseSolution({ detail }: { detail: CaseDetail }) {
       <h2 className="font-sans text-xl font-medium tracking-tight text-body lg:text-4xl">
         Решение
       </h2>
-      <div className="flex flex-col gap-4 bg-white p-4 lg:flex-row lg:items-center lg:gap-8">
-        <div className="flex flex-col gap-2 font-mono text-xs tracking-tight text-body/80 lg:w-1/2 lg:shrink-0 lg:text-base">
+      <div className="flex flex-col gap-2.5 bg-white p-4 lg:flex-row lg:items-center lg:gap-2">
+        <div className="flex flex-col gap-4 font-mono text-xs tracking-tight text-body/80 lg:flex-1 lg:gap-2 lg:text-base">
           {detail.solution.paragraphs.map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
           ))}
         </div>
-        <div className="relative w-full lg:w-1/2 lg:shrink-0">
+        <div className="relative aspect-[2694/1408] w-full lg:aspect-auto lg:h-[348px] lg:w-[665px] lg:shrink-0">
           <Image
             src={detail.solution.image.src}
             alt=""
-            width={detail.solution.image.width}
-            height={detail.solution.image.height}
-            className="h-auto w-full object-cover"
+            fill
+            className="object-cover"
           />
         </div>
       </div>
