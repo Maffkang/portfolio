@@ -28,8 +28,8 @@ export default async function CasePage({
       <SiteHeader />
       {detail ? (
         <main className="flex-1">
-          <CaseHero item={item} detail={detail} />
-          <div className="mx-auto w-full max-w-[1360px] px-6 sm:px-10">
+          <div className="mx-auto flex w-full max-w-[1360px] flex-col gap-18 px-6 py-10 sm:px-10 lg:py-16">
+            <CaseHero item={item} detail={detail} />
             <CaseIntro detail={detail} />
             <CaseSolution detail={detail} />
             <CaseServicesAccordion services={detail.services} />

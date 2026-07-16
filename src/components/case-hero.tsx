@@ -9,7 +9,7 @@ export function CaseHero({
   detail: CaseDetail;
 }) {
   return (
-    <section className="flex flex-col gap-8 bg-[#f0f8ff] px-6 py-8 sm:px-10 lg:flex-row lg:items-center lg:justify-between lg:py-12">
+    <section className="flex flex-col gap-8 bg-[#f0f8ff] p-6 lg:h-[349px] lg:flex-row lg:items-center lg:justify-between lg:p-10">
       <div className="flex max-w-[480px] flex-col gap-8">
         <div className="flex flex-col gap-4">
           <h1 className="font-sans text-xl font-medium tracking-tight text-body lg:text-4xl">

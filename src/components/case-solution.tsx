@@ -3,7 +3,7 @@ import type { CaseDetail } from "@/data/cases";
 
 export function CaseSolution({ detail }: { detail: CaseDetail }) {
   return (
-    <section className="flex flex-col gap-8 py-16">
+    <section className="flex flex-col gap-8">
       <h2 className="font-sans text-xl font-medium tracking-tight text-body lg:text-4xl">
         Решение
       </h2>
