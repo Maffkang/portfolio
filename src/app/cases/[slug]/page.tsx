@@ -8,6 +8,7 @@ import { CaseResultBox } from "@/components/case-result-box";
 import { CaseRoleResult } from "@/components/case-role-result";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { BackButton } from "@/components/back-button";
 import { caseDetails, cases } from "@/data/cases";
 
 export function generateStaticParams() {
@@ -31,6 +32,7 @@ export default async function CasePage({
       {detail ? (
         <main className="flex-1">
           <div className="mx-auto flex w-full max-w-[1360px] flex-col gap-18 px-6 pt-10 pb-36 sm:px-10 lg:pt-16">
+            <BackButton />
             <CaseHero item={item} detail={detail} />
             <CaseIntro heading={detail.introHeading} rows={detail.introRows} />
             {detail.solutionHeading &&
@@ -58,6 +60,7 @@ export default async function CasePage({
         </main>
       ) : (
         <main className="mx-auto flex w-full max-w-[1360px] flex-1 flex-col items-start gap-6 px-6 py-24 sm:px-10">
+          <BackButton />
           <h1 className="font-sans text-2xl font-medium tracking-tight text-body lg:text-4xl">
             {item.title}
           </h1>
