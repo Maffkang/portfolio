@@ -11,7 +11,7 @@ export function BackButton() {
       type="button"
       onClick={() => router.back()}
       aria-label="Назад"
-      className="flex size-[52px] shrink-0 items-center justify-center text-body"
+      className="sticky top-20 z-10 flex size-[52px] shrink-0 cursor-pointer items-center justify-center rounded-full bg-white/80 text-body backdrop-blur-sm transition-colors hover:bg-white lg:top-24"
     >
       <ArrowLeftIcon className="size-[22px]" />
     </button>
