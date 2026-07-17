@@ -21,7 +21,7 @@ export const cases: CaseItem[] = [
     description:
       "Я работал на пересечении продуктовой команды, разработки и бизнес-направления. Взаимодействовал с продакт-менеджерами, backend и embedded-разработчиками, а также с участниками, отвечающими за платёжную инфраструктуру.",
     tags: ["UX/UI", "Product design", "Fintech"],
-    cover: "/images/covers/cycle.png",
+    cover: "/images/covers/cycle.webp",
   },
   {
     slug: "zippy",
@@ -29,7 +29,7 @@ export const cases: CaseItem[] = [
     description:
       "Zippy — сервис покупки и продажи USDT за рубли. Целевая аудитория: люди с минимальным опытом в крипто которым нужно быстро и безопасно купить или продать валюту.",
     tags: ["UX/UI", "Mobile", "Crypto", "Product design"],
-    cover: "/images/covers/zippy.png",
+    cover: "/images/covers/zippy.webp",
   },
   {
     slug: "travel-card",
@@ -37,7 +37,7 @@ export const cases: CaseItem[] = [
     description:
       "Сервис оформления зарубежных банковских карт для пользователей из РФ в условиях жёстких сроков, где нужно было быстро собрать понятный и доверительный пользовательский опыт для сложного финансового процесса",
     tags: ["UX/UI", "Product design", "Claude", "AI"],
-    cover: "/images/covers/travel-card.png",
+    cover: "/images/covers/travel-card.webp",
   },
   {
     slug: "croc-k2",
@@ -45,7 +45,7 @@ export const cases: CaseItem[] = [
     description:
       "4 года визуального производства в enterprise-среде: конференции, айдентика, презентации, мероприятия. Работа в команде, много брендов, большой поток.",
     tags: ["Communication design", "IT", "AI", "UX/UI", "Product design"],
-    cover: "/images/covers/croc.png",
+    cover: "/images/covers/croc.webp",
   },
 ];
 
