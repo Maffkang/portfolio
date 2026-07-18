@@ -13,9 +13,43 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://marchenkoandrew.art"),
   title: "Marchenko Andrey — Portfolio",
   description:
     "UX/UI дизайнер с 5 годами опыта в fintech и IT. Портфолио кейсов.",
+  openGraph: {
+    title: "Marchenko Andrey — Portfolio",
+    description:
+      "UX/UI дизайнер с 5 годами опыта в fintech и IT. Портфолио кейсов.",
+    url: "/",
+    siteName: "Marchenko Andrey — Portfolio",
+    locale: "ru_RU",
+    type: "website",
+    images: [
+      {
+        url: "/images/og-card.png",
+        width: 1200,
+        height: 630,
+        alt: "Marchenko Andrey — Portfolio",
+        type: "image/png",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Marchenko Andrey — Portfolio",
+    description:
+      "UX/UI дизайнер с 5 годами опыта в fintech и IT. Портфолио кейсов.",
+    images: [
+      {
+        url: "/images/og-card.png",
+        width: 1200,
+        height: 630,
+        alt: "Marchenko Andrey — Portfolio",
+        type: "image/png",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
