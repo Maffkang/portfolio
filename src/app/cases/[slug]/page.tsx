@@ -32,8 +32,10 @@ export default async function CasePage({
       {detail ? (
         <main className="flex-1">
           <div className="mx-auto flex w-full max-w-[1360px] flex-col gap-18 px-6 pt-10 pb-36 sm:px-10 lg:pt-16">
-            <BackButton />
-            <CaseHero item={item} detail={detail} />
+            <div className="flex flex-col gap-8">
+              <BackButton />
+              <CaseHero item={item} detail={detail} />
+            </div>
             <CaseIntro heading={detail.introHeading} rows={detail.introRows} />
             {detail.solutionHeading &&
               detail.solutionParagraphs &&
