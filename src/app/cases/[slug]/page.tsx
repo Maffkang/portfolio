@@ -5,6 +5,7 @@ import { CaseIntro } from "@/components/case-intro";
 import { CaseSolution } from "@/components/case-solution";
 import { CaseServicesAccordion } from "@/components/case-services-accordion";
 import { CaseResultBox } from "@/components/case-result-box";
+import { CaseResultStats } from "@/components/case-result-stats";
 import { CaseRoleResult } from "@/components/case-role-result";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -30,12 +31,14 @@ export default async function CasePage({
     <div className="flex min-h-screen flex-col overflow-x-clip bg-surface font-sans text-body">
       <SiteHeader />
       {detail ? (
-        <main className="flex-1">
-          <div className="mx-auto flex w-full max-w-[1360px] flex-col gap-18 px-6 pt-10 pb-36 sm:px-10 lg:pt-16">
-            <div className="flex flex-col gap-8">
+        <main className="relative flex-1">
+          <div className="pointer-events-none absolute inset-0 z-10">
+            <div className="pointer-events-auto mx-auto h-full w-full max-w-[1360px] px-6 pt-10 sm:px-10 lg:pt-16">
               <BackButton />
-              <CaseHero item={item} detail={detail} />
             </div>
+          </div>
+          <div className="mx-auto flex w-full max-w-[1360px] flex-col gap-18 px-6 pt-10 pb-36 sm:px-10 lg:pt-16">
+            <CaseHero item={item} detail={detail} />
             <CaseIntro heading={detail.introHeading} rows={detail.introRows} />
             {detail.solutionHeading &&
               detail.solutionParagraphs &&
@@ -57,6 +60,12 @@ export default async function CasePage({
             )}
             {detail.resultParagraphs && (
               <CaseResultBox paragraphs={detail.resultParagraphs} />
+            )}
+            {detail.resultStatsSection && (
+              <CaseResultStats
+                paragraph={detail.resultStatsSection.paragraph}
+                stats={detail.resultStatsSection.stats}
+              />
             )}
           </div>
         </main>

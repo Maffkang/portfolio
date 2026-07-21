@@ -96,6 +96,16 @@ export type CaseRoleResultSection = {
   ctaHref: string;
 };
 
+export type CaseResultStat = {
+  value: string;
+  description: string;
+};
+
+export type CaseResultStatsSection = {
+  paragraph: string;
+  stats: CaseResultStat[];
+};
+
 export type CaseDetail = {
   tagline: string;
   role: string;
@@ -116,6 +126,8 @@ export type CaseDetail = {
   accordionItems?: CaseAccordionItem[];
   /** Optional tinted highlight box shown after the accordion (e.g. a results summary). */
   resultParagraphs?: string[];
+  /** Alternate "Результат" layout: a summary paragraph next to a grid of stat cards. */
+  resultStatsSection?: CaseResultStatsSection;
   /** Alternate "Решение" layout: a bullet list card next to a tinted result card + CTA button. */
   roleResultSection?: CaseRoleResultSection;
 };
@@ -260,6 +272,32 @@ export const caseDetails: Partial<Record<string, CaseDetail>> = {
         ],
       },
     ],
+    resultStatsSection: {
+      paragraph:
+        "В результате продукт получил более современный, понятный и целостный интерфейс, где ключевые сценарии стали восприниматься проще и логичнее. Важно, что эффект здесь не только визуальный: за счёт обновлённых пользовательских флоу и внедрения UI Kit продукт стал более устойчивой системой, которую легче поддерживать и масштабировать дальше. Для бизнеса это означает более удобный рабочий инструмент, а для команды более ясную основу для дальнейшей разработки",
+      stats: [
+        {
+          value: "150+",
+          description:
+            "экранов переработано и создано с нуля — онбординг, продажи, каталог, заказы, личный кабинет, история операций",
+        },
+        {
+          value: "5-6",
+          description:
+            "шагов в финальном онбординге — сокращён с перегруженного нелинейного сценария",
+        },
+        {
+          value: "UI Kit",
+          description:
+            "внедрён с нуля — унифицировал визуальную систему и заложил базу для масштабирования продукта",
+        },
+        {
+          value: "6",
+          description:
+            "переработаны в рамках одного продукта — онбординг, история транзакций, свободные продажи, каталоги, чеки, заказы",
+        },
+      ],
+    },
   },
   zippy: {
     tagline:
