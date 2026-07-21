@@ -1,4 +1,14 @@
-export function CharacterVideoSolid({ className }: { className?: string }) {
+export function CharacterVideoSolid({
+  className,
+  mp4Src = "/videos/lego-solid-mobile.mp4",
+  webmSrc = "/videos/lego-solid-mobile.webm",
+  poster = "/images/lego-poster-solid.webp",
+}: {
+  className?: string;
+  mp4Src?: string;
+  webmSrc?: string;
+  poster?: string;
+}) {
   return (
     <video
       className={className}
@@ -7,10 +17,10 @@ export function CharacterVideoSolid({ className }: { className?: string }) {
       muted
       playsInline
       preload="auto"
-      poster="/images/lego-poster-solid.webp"
+      poster={poster}
     >
-      <source src="/videos/lego-solid-mobile.mp4" type="video/mp4" />
-      <source src="/videos/lego-solid-mobile.webm" type="video/webm" />
+      <source src={mp4Src} type="video/mp4" />
+      <source src={webmSrc} type="video/webm" />
     </video>
   );
 }
