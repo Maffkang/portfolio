@@ -15,7 +15,7 @@ export function CaseRoleResult({
           <h3 className="font-sans text-lg font-medium tracking-tight text-body lg:text-xl">
             {section.roleTitle}
           </h3>
-          <ul className="flex list-disc flex-col gap-2 pl-[18px] font-mono text-xs tracking-tight text-body/80 lg:gap-4 lg:pl-6 lg:text-base">
+          <ul className="flex list-disc flex-col gap-2 pl-[18px] font-sans text-xs tracking-tight text-body/80 lg:gap-4 lg:pl-6 lg:text-base">
             {section.roleList.map((item, index) => (
               <li key={index}>{item}</li>
             ))}
@@ -29,7 +29,7 @@ export function CaseRoleResult({
             {section.resultParagraphs.map((paragraph, index) => (
               <p
                 key={index}
-                className="font-mono text-xs tracking-tight text-body/80 lg:text-base"
+                className="font-sans text-xs tracking-tight text-body/80 lg:text-base"
               >
                 {paragraph}
               </p>

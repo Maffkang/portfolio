@@ -15,7 +15,7 @@ export function SiteFooter() {
               <p className="font-sans text-lg font-medium tracking-tight text-body">
                 Кейсы:
               </p>
-              <ul className="flex flex-col gap-2 font-mono text-sm tracking-tight text-body">
+              <ul className="flex flex-col gap-2 font-sans text-sm tracking-tight text-body">
                 {cases.map((item) => (
                   <li key={item.slug}>{item.title}</li>
                 ))}
@@ -25,7 +25,7 @@ export function SiteFooter() {
               <p className="font-sans text-lg font-medium tracking-tight text-body">
                 Контакты
               </p>
-              <ul className="flex flex-col gap-2 font-mono text-sm tracking-tight text-body/80">
+              <ul className="flex flex-col gap-2 font-sans text-sm tracking-tight text-body/80">
                 {socialLinks.map((link) => (
                   <li key={link.label}>
                     <a
@@ -46,7 +46,7 @@ export function SiteFooter() {
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-between font-mono text-sm tracking-tight text-body/80">
+        <div className="flex items-center justify-between font-sans text-sm tracking-tight text-body/80">
           <p>© {profile.fullNameRu}</p>
           <p>{year}</p>
         </div>

@@ -22,7 +22,7 @@ export function CaseCard({ item }: { item: CaseItem }) {
           <h3 className="font-sans text-xl font-medium tracking-tight text-body">
             {item.title}
           </h3>
-          <p className="font-mono text-xs leading-relaxed tracking-tight text-body/80 sm:text-sm">
+          <p className="font-sans text-xs leading-relaxed tracking-tight text-body/80 sm:text-sm">
             {item.description}
           </p>
         </div>

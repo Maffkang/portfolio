@@ -30,7 +30,7 @@ export function CaseServicesAccordion({
                 aria-expanded={isOpen}
                 className="group flex w-full items-center justify-between gap-4 px-4 py-4 text-left lg:px-8"
               >
-                <span className="font-mono text-sm tracking-tight text-body lg:text-2xl">
+                <span className="font-sans text-sm tracking-tight text-body lg:text-2xl">
                   {item.title}
                 </span>
                 <ChevronRightIcon
@@ -41,7 +41,7 @@ export function CaseServicesAccordion({
               </button>
               {isOpen && (
                 <div className="flex flex-col gap-4 px-4 pb-4 lg:px-8 lg:pb-8">
-                  <p className="font-mono text-xs tracking-tight text-body/80 lg:text-base">
+                  <p className="font-sans text-xs tracking-tight text-body/80 lg:text-base">
                     {item.description}
                   </p>
                   <div className="flex flex-col items-center gap-4 lg:flex-row lg:items-start lg:gap-8">

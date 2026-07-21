@@ -14,10 +14,10 @@ function HeroContent({
         <h1 className="font-sans text-xl font-medium tracking-tight text-body lg:text-4xl">
           {item.title}
         </h1>
-        <p className="font-mono text-xs tracking-tight text-body/80 lg:text-base">
+        <p className="font-sans text-xs tracking-tight text-body/80 lg:text-base">
           {detail.tagline}
         </p>
-        <div className="flex items-center gap-4 font-mono text-xs tracking-tight text-body/80 lg:text-base">
+        <div className="flex items-center gap-4 font-sans text-xs tracking-tight text-body/80 lg:text-base">
           <span>Роль:</span>
           <span>{detail.role}</span>
         </div>

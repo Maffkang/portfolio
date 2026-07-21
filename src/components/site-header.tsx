@@ -33,7 +33,7 @@ export function SiteHeader() {
             {profile.name}
           </Link>
           <div className="flex items-center gap-16">
-            <nav className="flex items-center gap-8 font-mono text-base tracking-tight text-body">
+            <nav className="flex items-center gap-8 font-sans text-base tracking-tight text-body">
               {socialLinks.map((link) => (
                 <a
                   key={link.label}

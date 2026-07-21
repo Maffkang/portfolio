@@ -66,10 +66,10 @@ export default async function CasePage({
           <h1 className="font-sans text-2xl font-medium tracking-tight text-body lg:text-4xl">
             {item.title}
           </h1>
-          <p className="font-mono text-sm tracking-tight text-body/80">
+          <p className="font-sans text-sm tracking-tight text-body/80">
             Страница кейса пока готовится.
           </p>
-          <Link href="/" className="font-mono text-sm text-main hover:underline">
+          <Link href="/" className="font-sans text-sm text-main hover:underline">
             ← На главную
           </Link>
         </main>

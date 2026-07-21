@@ -42,7 +42,7 @@ export function MobileSocialMenu() {
       {isOpen && (
         <div
           role="menu"
-          className="absolute right-0 top-full z-30 mt-2 flex flex-col items-start gap-8 whitespace-nowrap bg-white p-8 font-mono text-base tracking-tight text-body shadow-[0px_0px_16px_0px_rgba(0,0,0,0.06),0px_16px_32px_0px_rgba(0,0,0,0.04)]"
+          className="absolute right-0 top-full z-30 mt-2 flex flex-col items-start gap-8 whitespace-nowrap bg-white p-8 font-sans text-base tracking-tight text-body shadow-[0px_0px_16px_0px_rgba(0,0,0,0.06),0px_16px_32px_0px_rgba(0,0,0,0.04)]"
         >
           {socialLinks.map((link) => (
             <a

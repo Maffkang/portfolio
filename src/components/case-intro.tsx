@@ -15,7 +15,7 @@ function IntroCard({ card }: { card: CaseTextCard }) {
         {card.paragraphs.map((paragraph, index) => (
           <p
             key={index}
-            className="font-mono text-xs tracking-tight text-body/80 lg:text-base"
+            className="font-sans text-xs tracking-tight text-body/80 lg:text-base"
           >
             {paragraph}
           </p>

@@ -16,7 +16,7 @@ export function CaseSolution({
         {heading}
       </h2>
       <div className="flex flex-col gap-2 bg-white p-4 lg:flex-row lg:items-start lg:gap-2">
-        <div className="flex flex-col gap-2 font-mono text-xs tracking-tight text-body/80 lg:flex-1 lg:text-base">
+        <div className="flex flex-col gap-2 font-sans text-xs tracking-tight text-body/80 lg:flex-1 lg:text-base">
           {paragraphs.map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
           ))}

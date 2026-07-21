@@ -24,7 +24,7 @@ export default function Home() {
                 <h2 className="font-sans text-xl font-medium tracking-tight text-body">
                   {profile.greeting}
                 </h2>
-                <p className="font-mono text-sm leading-relaxed tracking-tight text-body/80">
+                <p className="font-sans text-sm leading-relaxed tracking-tight text-body/80">
                   {profile.bio}
                 </p>
               </div>
