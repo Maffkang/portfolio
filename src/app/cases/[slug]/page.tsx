@@ -33,7 +33,7 @@ export default async function CasePage({
       {detail ? (
         <main className="relative flex-1">
           <div className="pointer-events-none absolute inset-0 z-10">
-            <div className="pointer-events-auto mx-auto w-full max-w-[1360px] px-6 pt-10 sm:px-10 lg:pt-16">
+            <div className="mx-auto h-full w-full max-w-[1360px] px-6 pt-10 sm:px-10 lg:pt-16">
               <BackButton />
             </div>
           </div>
