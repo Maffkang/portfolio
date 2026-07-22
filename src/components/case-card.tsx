@@ -2,11 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRightIcon } from "@/components/icons/arrow-up-right";
 import type { CaseItem } from "@/data/cases";
+import { localizedPath, type Lang } from "@/lib/i18n";
 
-export function CaseCard({ item }: { item: CaseItem }) {
+export function CaseCard({ item, lang }: { item: CaseItem; lang: Lang }) {
   return (
     <Link
-      href={`/cases/${item.slug}`}
+      href={localizedPath(lang, `/cases/${item.slug}`)}
       className="group flex flex-col bg-white sm:flex-row sm:gap-8 sm:pr-8"
     >
       <div className="relative h-[203px] w-full shrink-0 overflow-hidden sm:h-[302px] sm:w-[285px]">

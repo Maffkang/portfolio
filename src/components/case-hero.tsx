@@ -1,12 +1,15 @@
 import Image from "next/image";
 import type { CaseDetail, CaseItem } from "@/data/cases";
+import { ui, type Lang } from "@/lib/i18n";
 
 function HeroContent({
   item,
   detail,
+  lang,
 }: {
   item: CaseItem;
   detail: CaseDetail;
+  lang: Lang;
 }) {
   return (
     <>
@@ -18,7 +21,7 @@ function HeroContent({
           {detail.tagline}
         </p>
         <div className="flex items-center gap-4 font-sans text-xs tracking-tight text-body/80 lg:text-base">
-          <span>Роль:</span>
+          <span>{ui[lang].role}</span>
           <span>{detail.role}</span>
         </div>
       </div>
@@ -41,9 +44,11 @@ const DEFAULT_MOBILE_HERO_GAP = 32;
 export function CaseHero({
   item,
   detail,
+  lang,
 }: {
   item: CaseItem;
   detail: CaseDetail;
+  lang: Lang;
 }) {
   return (
     <section>
@@ -57,7 +62,7 @@ export function CaseHero({
           priority
         />
         <div className="absolute top-[37px] left-[39px] flex max-w-[480px] flex-col gap-8">
-          <HeroContent item={item} detail={detail} />
+          <HeroContent item={item} detail={detail} lang={lang} />
         </div>
       </div>
 
@@ -76,7 +81,7 @@ export function CaseHero({
             gap: `${detail.heroBanner.mobileContentGap ?? DEFAULT_MOBILE_HERO_GAP}px`,
           }}
         >
-          <HeroContent item={item} detail={detail} />
+          <HeroContent item={item} detail={detail} lang={lang} />
         </div>
       </div>
     </section>

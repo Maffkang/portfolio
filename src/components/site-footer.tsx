@@ -1,7 +1,11 @@
-import { cases, profile, socialLinks } from "@/data/cases";
+import { getContent } from "@/data/cases";
+import type { Lang } from "@/lib/i18n";
 
-export function SiteFooter() {
+export function SiteFooter({ lang }: { lang: Lang }) {
+  const { cases, profile, socialLinks } = getContent(lang);
   const year = new Date().getFullYear();
+  const casesLabel = lang === "ru" ? "Кейсы:" : "Cases:";
+  const contactsLabel = lang === "ru" ? "Контакты" : "Contacts";
 
   return (
     <footer className="bg-white px-6 py-9 sm:px-10">
@@ -13,7 +17,7 @@ export function SiteFooter() {
           <div className="flex gap-16">
             <div className="flex flex-col gap-4">
               <p className="font-sans text-lg font-medium tracking-tight text-body">
-                Кейсы:
+                {casesLabel}
               </p>
               <ul className="flex flex-col gap-2 font-sans text-sm tracking-tight text-body">
                 {cases.map((item) => (
@@ -23,7 +27,7 @@ export function SiteFooter() {
             </div>
             <div className="flex flex-col gap-4">
               <p className="font-sans text-lg font-medium tracking-tight text-body">
-                Контакты
+                {contactsLabel}
               </p>
               <ul className="flex flex-col gap-2 font-sans text-sm tracking-tight text-body/80">
                 {socialLinks.map((link) => (
@@ -47,7 +51,7 @@ export function SiteFooter() {
           </div>
         </div>
         <div className="flex items-center justify-between font-sans text-sm tracking-tight text-body/80">
-          <p>© {profile.fullNameRu}</p>
+          <p>© {profile.legalName}</p>
           <p>{year}</p>
         </div>
       </div>

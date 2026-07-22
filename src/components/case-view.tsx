@@ -10,35 +10,29 @@ import { CaseRoleResult } from "@/components/case-role-result";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { BackButton } from "@/components/back-button";
-import { caseDetails, cases } from "@/data/cases";
+import { getContent } from "@/data/cases";
+import { localizedPath, ui, type Lang } from "@/lib/i18n";
 
-export function generateStaticParams() {
-  return cases.map((item) => ({ slug: item.slug }));
-}
-
-export default async function CasePage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const { slug } = await params;
+export function CaseView({ lang, slug }: { lang: Lang; slug: string }) {
+  const { cases, caseDetails } = getContent(lang);
   const item = cases.find((c) => c.slug === slug);
   if (!item) notFound();
 
   const detail = caseDetails[slug];
+  const path = `/cases/${slug}`;
 
   return (
     <div className="flex min-h-screen flex-col overflow-x-clip bg-surface font-sans text-body">
-      <SiteHeader />
+      <SiteHeader lang={lang} path={path} />
       {detail ? (
         <main className="relative flex-1">
           <div className="pointer-events-none absolute inset-0 z-10">
             <div className="mx-auto h-full w-full max-w-[1360px] px-6 pt-10 sm:px-10 lg:pt-16">
-              <BackButton />
+              <BackButton lang={lang} />
             </div>
           </div>
           <div className="mx-auto flex w-full max-w-[1360px] flex-col gap-18 px-6 pt-10 pb-36 sm:px-10 lg:pt-16">
-            <CaseHero item={item} detail={detail} />
+            <CaseHero item={item} detail={detail} lang={lang} />
             <CaseIntro heading={detail.introHeading} rows={detail.introRows} />
             {detail.solutionHeading &&
               detail.solutionParagraphs &&
@@ -71,19 +65,22 @@ export default async function CasePage({
         </main>
       ) : (
         <main className="mx-auto flex w-full max-w-[1360px] flex-1 flex-col items-start gap-6 px-6 py-24 sm:px-10">
-          <BackButton />
+          <BackButton lang={lang} />
           <h1 className="font-sans text-2xl font-medium tracking-tight text-body lg:text-4xl">
             {item.title}
           </h1>
           <p className="font-sans text-sm tracking-tight text-body/80">
-            Страница кейса пока готовится.
+            {ui[lang].casePending}
           </p>
-          <Link href="/" className="font-sans text-sm text-main hover:underline">
-            ← На главную
+          <Link
+            href={localizedPath(lang, "/")}
+            className="font-sans text-sm text-main hover:underline"
+          >
+            {ui[lang].backToHome}
           </Link>
         </main>
       )}
-      <SiteFooter />
+      <SiteFooter lang={lang} />
     </div>
   );
 }

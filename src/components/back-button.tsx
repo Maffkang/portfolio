@@ -2,15 +2,16 @@
 
 import { useRouter } from "next/navigation";
 import { ArrowLeftIcon } from "@/components/icons/arrow-left";
+import { ui, type Lang } from "@/lib/i18n";
 
-export function BackButton() {
+export function BackButton({ lang }: { lang: Lang }) {
   const router = useRouter();
 
   return (
     <button
       type="button"
       onClick={() => router.back()}
-      aria-label="Назад"
+      aria-label={ui[lang].back}
       className="pointer-events-auto sticky top-20 z-10 flex size-[52px] shrink-0 cursor-pointer items-center justify-center rounded-full bg-white/80 text-body backdrop-blur-sm transition-colors hover:bg-white lg:top-24"
     >
       <ArrowLeftIcon className="size-[22px]" />

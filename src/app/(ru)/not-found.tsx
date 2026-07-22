@@ -7,9 +7,9 @@ import { BackButton } from "@/components/back-button";
 export default function NotFound() {
   return (
     <div className="flex min-h-screen flex-col overflow-x-clip bg-surface font-sans text-body">
-      <SiteHeader />
+      <SiteHeader lang="ru" path="/" />
       <main className="mx-auto w-full max-w-[1360px] flex-1 px-6 sm:px-10">
-        <BackButton />
+        <BackButton lang="ru" />
         <div className="flex flex-col gap-8 py-16 lg:relative lg:min-h-[720px] lg:gap-0 lg:py-0">
           <div className="flex flex-col items-start gap-8 lg:absolute lg:top-[140px] lg:max-w-[592px]">
             <p className="max-w-[353px] font-sans text-4xl font-medium tracking-tight text-black lg:max-w-[592px]">
@@ -36,7 +36,7 @@ export default function NotFound() {
           </div>
         </div>
       </main>
-      <SiteFooter />
+      <SiteFooter lang="ru" />
     </div>
   );
 }

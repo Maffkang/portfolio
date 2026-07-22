@@ -1,9 +1,12 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { socialLinks } from "@/data/cases";
 
-export function MobileSocialMenu() {
+export function MobileSocialMenu({
+  socialLinks,
+}: {
+  socialLinks: { label: string; href: string }[];
+}) {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 

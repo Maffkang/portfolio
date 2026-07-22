@@ -5,16 +5,19 @@ import { PinnedCharacter } from "@/components/pinned-character";
 import { ProfileAvatar } from "@/components/profile-avatar";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { cases, profile } from "@/data/cases";
+import { getContent } from "@/data/cases";
+import { ui, type Lang } from "@/lib/i18n";
 
-export default function Home() {
+export function HomeView({ lang }: { lang: Lang }) {
+  const { cases, profile } = getContent(lang);
+
   return (
     <div className="flex min-h-screen flex-col overflow-x-clip bg-surface font-sans text-body">
-      <SiteHeader />
+      <SiteHeader lang={lang} path="/" />
       <main className="mx-auto w-full max-w-[1360px] flex-1 px-6 pb-24 sm:px-10">
         <div className="grid lg:grid-cols-[739px_1fr] lg:gap-8">
           <div className="flex flex-col gap-[72px] pt-10 lg:pt-16">
-            <Hero />
+            <Hero lang={lang} />
 
             <MobileCharacter />
 
@@ -32,11 +35,11 @@ export default function Home() {
 
             <section className="max-w-[705px]">
               <h2 className="font-sans text-4xl font-medium tracking-tight text-body">
-                Кейсы
+                {ui[lang].casesHeading}
               </h2>
               <div className="mt-12 flex flex-col gap-8">
                 {cases.map((item) => (
-                  <CaseCard key={item.slug} item={item} />
+                  <CaseCard key={item.slug} item={item} lang={lang} />
                 ))}
               </div>
             </section>
@@ -47,7 +50,7 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <SiteFooter />
+      <SiteFooter lang={lang} />
     </div>
   );
 }

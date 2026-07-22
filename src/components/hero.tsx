@@ -1,7 +1,9 @@
 import Image from "next/image";
-import { profile, profileTags } from "@/data/cases";
+import { getContent } from "@/data/cases";
+import type { Lang } from "@/lib/i18n";
 
-export function Hero() {
+export function Hero({ lang }: { lang: Lang }) {
+  const { profile, profileTags } = getContent(lang);
   return (
     <div className="flex flex-col items-end gap-4">
       <p className="w-full text-right font-sans text-lg font-medium tracking-tight text-body sm:text-xl">
