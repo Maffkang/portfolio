@@ -105,8 +105,6 @@ export type CaseDetail = {
     mobileBackground: CaseImage;
     /** Gap (px) between the text block and the tags row in the mobile banner. Defaults to 32. */
     mobileContentGap?: number;
-    /** Decorative photo floating past the top-right edge of the page (desktop only). */
-    decorPhoto?: CaseImage;
   };
   introHeading: string;
   /** Each entry is a row of 1-2 cards rendered side by side (desktop) / stacked (mobile). */
@@ -262,11 +260,6 @@ const crocHeroBanner = {
     src: "/images/cases/croc-k2/hero-bg-mobile.webp",
     width: 1110,
     height: 1431,
-  },
-  decorPhoto: {
-    src: "/images/cases/croc-k2/decor-photo.webp",
-    width: 1024,
-    height: 1024,
   },
 };
 
