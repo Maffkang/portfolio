@@ -7,6 +7,8 @@ import { CaseServicesAccordion } from "@/components/case-services-accordion";
 import { CaseResultBox } from "@/components/case-result-box";
 import { CaseResultStats } from "@/components/case-result-stats";
 import { CaseRoleResult } from "@/components/case-role-result";
+import { CaseApproachResult } from "@/components/case-approach-result";
+import { CasePortfolioAccordion } from "@/components/case-portfolio-accordion";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { BackButton } from "@/components/back-button";
@@ -46,6 +48,9 @@ export function CaseView({ lang, slug }: { lang: Lang; slug: string }) {
             {detail.roleResultSection && (
               <CaseRoleResult section={detail.roleResultSection} />
             )}
+            {detail.approachResultSection && (
+              <CaseApproachResult section={detail.approachResultSection} />
+            )}
             {detail.accordionHeading && detail.accordionItems && (
               <CaseServicesAccordion
                 heading={detail.accordionHeading}
@@ -60,6 +65,9 @@ export function CaseView({ lang, slug }: { lang: Lang; slug: string }) {
                 paragraph={detail.resultStatsSection.paragraph}
                 stats={detail.resultStatsSection.stats}
               />
+            )}
+            {detail.portfolioSection && (
+              <CasePortfolioAccordion section={detail.portfolioSection} />
             )}
           </div>
         </main>

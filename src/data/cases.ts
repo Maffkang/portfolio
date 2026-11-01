@@ -48,6 +48,54 @@ export type CaseResultStatsSection = {
   stats: CaseResultStat[];
 };
 
+/** Alternate "Решение" layout: an approach card next to a tinted card with a stat grid. */
+export type CaseApproachResultSection = {
+  heading: string;
+  approachTitle: string;
+  approachParagraphs: string[];
+  resultTitle: string;
+  stats: CaseResultStat[];
+};
+
+type CasePortfolioItemBase = {
+  title: string;
+  description: string;
+};
+
+/** A field whose images lay out as a uniform photo grid (same aspect ratio per image). */
+export type CasePortfolioGridItem = CasePortfolioItemBase & {
+  kind: "grid";
+  /** Secondary note shown below the description, e.g. an NDA disclaimer. */
+  secondaryDescription?: string;
+  images: CaseImage[];
+  desktopColumns: number;
+  /** Renders blurred, e.g. material that can't be shown in full due to NDA. */
+  blurImages?: boolean;
+};
+
+/** A field that shows tall page screenshots cropped to their top in fixed-size windows. */
+export type CasePortfolioLongreadsItem = CasePortfolioItemBase & {
+  kind: "longreads";
+  longreads: CaseImage[];
+};
+
+/** A field with a row of cover images followed by full-width banner images. */
+export type CasePortfolioPrintItem = CasePortfolioItemBase & {
+  kind: "print";
+  covers: CaseImage[];
+  banners: CaseImage[];
+};
+
+export type CasePortfolioItem =
+  | CasePortfolioGridItem
+  | CasePortfolioLongreadsItem
+  | CasePortfolioPrintItem;
+
+export type CasePortfolioSection = {
+  heading: string;
+  items: CasePortfolioItem[];
+};
+
 export type CaseDetail = {
   tagline: string;
   role: string;
@@ -57,6 +105,8 @@ export type CaseDetail = {
     mobileBackground: CaseImage;
     /** Gap (px) between the text block and the tags row in the mobile banner. Defaults to 32. */
     mobileContentGap?: number;
+    /** Decorative photo floating past the top-right edge of the page (desktop only). */
+    decorPhoto?: CaseImage;
   };
   introHeading: string;
   /** Each entry is a row of 1-2 cards rendered side by side (desktop) / stacked (mobile). */
@@ -72,6 +122,10 @@ export type CaseDetail = {
   resultStatsSection?: CaseResultStatsSection;
   /** Alternate "Решение" layout: a bullet list card next to a tinted result card + CTA button. */
   roleResultSection?: CaseRoleResultSection;
+  /** Alternate "Решение" layout: an approach card next to a tinted result stat grid. */
+  approachResultSection?: CaseApproachResultSection;
+  /** "Результат" portfolio section: a heading + a list of expandable image-grid fields. */
+  portfolioSection?: CasePortfolioSection;
 };
 
 type Content = {
@@ -194,6 +248,74 @@ const zippyAccordionImages = {
 };
 
 const travelCardCtaHref = "https://travelcard.my2can.com";
+
+const crocTags = ["Graphic design", "UX/UI", "AI", "Branding", "Presentation"];
+const crocDigitalDesignerRole = "Middle+ Digital designer";
+
+const crocHeroBanner = {
+  desktopBackground: {
+    src: "/images/cases/croc-k2/hero-bg-desktop.webp",
+    width: 4080,
+    height: 1047,
+  },
+  mobileBackground: {
+    src: "/images/cases/croc-k2/hero-bg-mobile.webp",
+    width: 1110,
+    height: 1431,
+  },
+  decorPhoto: {
+    src: "/images/cases/croc-k2/decor-photo.webp",
+    width: 1024,
+    height: 1024,
+  },
+};
+
+const crocApproachResultStats: CaseResultStat[] = [
+  { value: "1100+", description: "слайдов для трёх крупных конференций" },
+  { value: "~600", description: "из них для K2Cloud Day за 4–5 дней" },
+  { value: "~400", description: "слайдов для Orion Digital Race в одиночку" },
+  { value: "5", description: "брендов в одной системе производства" },
+];
+
+const crocApproachResultStatsEn: CaseResultStat[] = [
+  { value: "1100+", description: "slides for three major conferences" },
+  { value: "~600", description: "of them for K2Cloud Day in 4–5 days" },
+  { value: "~400", description: "slides for Orion Digital Race, solo" },
+  { value: "5", description: "brands within a single production system" },
+];
+
+function crocGridImages(prefix: string, count: number, width: number, height: number): CaseImage[] {
+  return Array.from({ length: count }, (_, i) => ({
+    src: `/images/cases/croc-k2/${prefix}-${String(i + 1).padStart(2, "0")}.webp`,
+    width,
+    height,
+  }));
+}
+
+const crocOrionImages = crocGridImages("orion", 12, 1600, 900);
+const crocK2CloudImages = crocGridImages("k2cloud", 8, 1600, 900);
+const crocVkTechImages = crocGridImages("vktech", 8, 1600, 900);
+const crocDemoDayImages = crocGridImages("demoday", 8, 1600, 900);
+const crocSocialImages = crocGridImages("social", 12, 1920, 1920);
+
+const crocLongreadImages: CaseImage[] = [
+  { src: "/images/cases/croc-k2/longread-1.webp", width: 595, height: 1649 },
+  { src: "/images/cases/croc-k2/longread-2.webp", width: 595, height: 2019 },
+  { src: "/images/cases/croc-k2/longread-3.webp", width: 595, height: 2684 },
+  { src: "/images/cases/croc-k2/longread-4.webp", width: 595, height: 3699 },
+];
+
+const crocPrintCovers: CaseImage[] = [
+  { src: "/images/cases/croc-k2/print-cover-1.webp", width: 757, height: 1029 },
+  { src: "/images/cases/croc-k2/print-cover-2.webp", width: 756, height: 1030 },
+  { src: "/images/cases/croc-k2/print-cover-3.webp", width: 850, height: 1190 },
+  { src: "/images/cases/croc-k2/print-cover-4.webp", width: 851, height: 1189 },
+];
+
+const crocPrintBanners: CaseImage[] = [
+  { src: "/images/cases/croc-k2/print-banner-1.webp", width: 2490, height: 826 },
+  { src: "/images/cases/croc-k2/print-banner-2.webp", width: 1417, height: 473 },
+];
 
 const socialLinks = [
   { label: "Telegram", href: "https://t.me/maffkang" },
@@ -490,6 +612,102 @@ const ruContent: Content = {
         ctaHref: travelCardCtaHref,
       },
     },
+    "croc-k2": {
+      tagline:
+        "4+ года визуального производства в enterprise-среде: конференции, айдентика, презентации, мероприятия. Работа в команде, много брендов, большой поток.",
+      role: crocDigitalDesignerRole,
+      tags: crocTags,
+      heroBanner: crocHeroBanner,
+      introHeading: "Вводные данные",
+      introRows: [
+        [
+          {
+            title: "Моя роль и вклад",
+            paragraphs: [
+              "Прошёл путь от стажёра до ведущего дизайнера на отдельном продукте. Закрывал визуальное производство компании и её клиентов: корпоративные презентации, айдентику, конференции, digital и print. Параллельно вёл продуктовую работу: с нуля спроектировал интерфейс AI-продукта как единственный дизайнер на направлении.",
+            ],
+          },
+          {
+            title: "Проблема",
+            paragraphs: [
+              "Единой системы не было, и каждый проект собирался с нуля. Из-за этого уходило время, а визуал на разных носителях расходился.",
+            ],
+          },
+        ],
+      ],
+      approachResultSection: {
+        heading: "Решение",
+        approachTitle: "Подход",
+        approachParagraphs: [
+          "Выстроил личную систему производства: шаблоны, компонентная база, единые принципы адаптации под разные бренды. Это сократило время на типовые задачи и освободило голову для нетиповых. На конференциях жёсткое планирование по блокам, приоритизация экранов по видимости. На продукте полный цикл от исследования до передачи, без дизайн-лида над собой.",
+        ],
+        resultTitle: "Результат",
+        stats: crocApproachResultStats,
+      },
+      portfolioSection: {
+        heading: "Результат",
+        items: [
+          {
+            kind: "grid",
+            title: "Ежегодная IT-конференция Orion Digital Race",
+            description:
+              "2000+ участников, спикеры из Positive Technologies, Газпром нефть, Т-Банка, X5 Group. Материалы идут на большой экран перед залом из топ-менеджеров рынка. Закрыл визуальный дизайн в одиночку: ~400 слайдов + цифровые визуалы для офлайн-сцены. Концепт «гонки» проходил через все форматы от заставок треков до слайдов спикеров.",
+            images: crocOrionImages,
+            desktopColumns: 4,
+          },
+          {
+            kind: "grid",
+            title: "Конференция K2Cloud Day",
+            description:
+              "Ежегодная облачная конференция K2Cloud. ~600 слайдов за 4–5 дней: доклады спикеров, заставки, сквозной визуальный стиль. Согласовывал напрямую со спикерами и организаторами.",
+            images: crocK2CloudImages,
+            desktopColumns: 4,
+          },
+          {
+            kind: "grid",
+            title: "Конференция VK Tech x Croc",
+            description:
+              "Получил готовый шаблон и задачу: привести все материалы к единому фирменному стилю, не сломав структуру. 150+ слайдов, несколько спикеров, 4 дня. Работал в режиме потока: правил, согласовывал, адаптировал под каждого выступающего — и при этом держал визуальную консистентность по всей колоде.",
+            images: crocVkTechImages,
+            desktopColumns: 4,
+          },
+          {
+            kind: "grid",
+            title: "Конференции Demo Day",
+            description:
+              "Внутренняя конференция компании, 100+ слайдов, прямое взаимодействие с топ-менеджментом компании",
+            secondaryDescription:
+              "(к сожалению, показать слайды нельзя в силу строго НДА)",
+            images: crocDemoDayImages,
+            desktopColumns: 4,
+            blurImages: true,
+          },
+          {
+            kind: "longreads",
+            title: "Лонгриды, цифровые листовки",
+            description:
+              "Лонгриды и листовки для K2TEX, КРОК и партнёрских конференций. Задача: превратить плотный технический текст про инфраструктуру и сервисы в материал, который менеджер может отправить клиенту без пояснений.",
+            longreads: crocLongreadImages,
+          },
+          {
+            kind: "print",
+            title: "Печатная продукция",
+            description:
+              "Буклеты и исследования для K2 Кибербезопасность, K2TEX и HR-направления. Цифры, схемы решений и кейсы сверстаны так, чтобы главное считывалось за минуту, а детали оставались для тех, кто читает дальше.",
+            covers: crocPrintCovers,
+            banners: crocPrintBanners,
+          },
+          {
+            kind: "grid",
+            title: "Материалы в социальные сети",
+            description:
+              "Серия постов для K2 Кибербезопасность: экспертные разборы, цитаты спикеров, анонсы и праздничные посты. Держал единый визуальный язык для всей серии, от сложных технических тем до лёгкого контента.",
+            images: crocSocialImages,
+            desktopColumns: 6,
+          },
+        ],
+      },
+    },
   },
 };
 
@@ -770,6 +988,102 @@ const enContent: Content = {
         ],
         ctaLabel: "Go to the travel card website",
         ctaHref: travelCardCtaHref,
+      },
+    },
+    "croc-k2": {
+      tagline:
+        "4+ years of visual production in an enterprise environment: conferences, branding, presentations, events. Teamwork, many brands, high volume.",
+      role: crocDigitalDesignerRole,
+      tags: crocTags,
+      heroBanner: crocHeroBanner,
+      introHeading: "Introductions",
+      introRows: [
+        [
+          {
+            title: "My role and contribution",
+            paragraphs: [
+              "I went from intern to lead designer on a dedicated product. I owned the company's visual production for itself and its clients: corporate presentations, branding, conferences, digital and print. In parallel, I led product work: designed the interface of an AI product from scratch as the sole designer on the team.",
+            ],
+          },
+          {
+            title: "Problem",
+            paragraphs: [
+              "There was no unified system, and every project was built from scratch. This wasted time, and the visuals diverged across different media.",
+            ],
+          },
+        ],
+      ],
+      approachResultSection: {
+        heading: "Solution",
+        approachTitle: "Approach",
+        approachParagraphs: [
+          "I built a personal production system: templates, a component base, and unified principles for adapting to different brands. This cut the time spent on routine tasks and freed up headspace for the non-routine ones. For conferences, strict block-by-block planning and prioritizing screens by visibility. For the product, the full cycle from research to handoff, with no design lead above me.",
+        ],
+        resultTitle: "Result",
+        stats: crocApproachResultStatsEn,
+      },
+      portfolioSection: {
+        heading: "Result",
+        items: [
+          {
+            kind: "grid",
+            title: "Annual IT conference Orion Digital Race",
+            description:
+              "2000+ attendees, speakers from Positive Technologies, Gazprom Neft, T-Bank, X5 Group. Materials ran on a large screen in front of a room of top market executives. I handled the visual design solo: ~400 slides plus digital visuals for the offline stage. The \"race\" concept ran through every format, from track intros to speaker slides.",
+            images: crocOrionImages,
+            desktopColumns: 4,
+          },
+          {
+            kind: "grid",
+            title: "K2Cloud Day conference",
+            description:
+              "The annual K2Cloud cloud conference. ~600 slides in 4–5 days: speaker talks, intros, a consistent visual style throughout. I coordinated directly with speakers and organizers.",
+            images: crocK2CloudImages,
+            desktopColumns: 4,
+          },
+          {
+            kind: "grid",
+            title: "VK Tech x Croc conference",
+            description:
+              "I received a ready-made template and a task: bring all materials to a single brand style without breaking the structure. 150+ slides, several speakers, 4 days. I worked in a continuous flow: editing, approving, adapting for each speaker, while keeping visual consistency across the whole deck.",
+            images: crocVkTechImages,
+            desktopColumns: 4,
+          },
+          {
+            kind: "grid",
+            title: "Demo Day conferences",
+            description:
+              "An internal company conference, 100+ slides, direct interaction with the company's top management.",
+            secondaryDescription:
+              "(unfortunately, the slides can't be shown due to a strict NDA)",
+            images: crocDemoDayImages,
+            desktopColumns: 4,
+            blurImages: true,
+          },
+          {
+            kind: "longreads",
+            title: "Long-reads, digital flyers",
+            description:
+              "Long-reads and flyers for K2TEX, CROC, and partner conferences. The task: turn dense technical text about infrastructure and services into material a manager could send to a client without any explanation.",
+            longreads: crocLongreadImages,
+          },
+          {
+            kind: "print",
+            title: "Printed materials",
+            description:
+              "Booklets and research pieces for K2 Cybersecurity, K2TEX, and HR. Numbers, solution diagrams, and case studies are laid out so the main point reads in a minute, with details left for those who keep reading.",
+            covers: crocPrintCovers,
+            banners: crocPrintBanners,
+          },
+          {
+            kind: "grid",
+            title: "Social media materials",
+            description:
+              "A post series for K2 Cybersecurity: expert breakdowns, speaker quotes, announcements, and holiday posts. I kept a consistent visual language across the whole series, from complex technical topics to lighter content.",
+            images: crocSocialImages,
+            desktopColumns: 6,
+          },
+        ],
       },
     },
   },

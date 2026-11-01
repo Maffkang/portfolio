@@ -53,16 +53,28 @@ export function CaseHero({
   return (
     <section>
       {/* Desktop: background photo, text positioned to match the Figma offsets */}
-      <div className="relative hidden overflow-hidden lg:block lg:h-[349px]">
-        <Image
-          src={detail.heroBanner.desktopBackground.src}
-          alt=""
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute top-[37px] left-[39px] flex max-w-[480px] flex-col gap-8">
-          <HeroContent item={item} detail={detail} lang={lang} />
+      <div className="relative hidden lg:block lg:h-[349px]">
+        {detail.heroBanner.decorPhoto && (
+          <div className="pointer-events-none absolute -top-20 -right-10 z-10 aspect-square w-[160px] -rotate-[13deg] overflow-hidden shadow-lg">
+            <Image
+              src={detail.heroBanner.decorPhoto.src}
+              alt=""
+              fill
+              className="object-cover"
+            />
+          </div>
+        )}
+        <div className="absolute inset-0 overflow-hidden">
+          <Image
+            src={detail.heroBanner.desktopBackground.src}
+            alt=""
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute top-[37px] left-[39px] flex max-w-[480px] flex-col gap-8">
+            <HeroContent item={item} detail={detail} lang={lang} />
+          </div>
         </div>
       </div>
 
