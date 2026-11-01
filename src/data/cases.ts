@@ -331,7 +331,7 @@ const ruContent: Content = {
     name: "Marchenko Andrey",
     legalName: "Марченко Андрей",
     greeting: "Привет! Меня зовут Марченко Андрей",
-    bio: "Я дизайнер цифровых продуктов с 5 годами опыта в fintech, IT. Работал с командами из Европы и ЮАР. Работаю на стыке дизайна и продукта, думаю что дизайнер это профессионал который понимает дизайн как совокупность навыков и инструментов, концепций, практик, и способен выполнять любую работу как продуктовую, так и коммуникационную.",
+    bio: "Цифровой дизайнер с 5 годами опыта в fintech, IT. Работаю на стыке дизайна и продукта, давно убежден в том, что дизайнер - это профессионал который понимает дизайн как совокупность навыков и инструментов, концепций, практик, и способен выполнять любую работу как продуктовую, так и коммуникационную. Именно по этому принципу я и работал всю свою карьеру, успел поработать с крипто-сервисами, платёжными системами и эквайрингом, запускал MVP за считаные недели, строил дизайн-системы на 150+ экранов. Также закрывал коммуникационные задачи в CROC: конференции на 400-600 слайдов, фирменный стиль, ивент-графика, полиграфия. Работал с командами из России, Европы и ЮАР.",
     footerThanks: "Спасибо за просмотр!",
   },
   cases: [
@@ -709,7 +709,7 @@ const enContent: Content = {
     name: "Marchenko Andrey",
     legalName: "Marchenko Andrey",
     greeting: "Hello! My name is Marchenko Andrey",
-    bio: "I am a digital product designer with 5 years of experience in fintech and IT. I have worked with teams from Europe and South Africa. I operate at the intersection of design and product, believing that a designer is a professional who understands design as a combination of skills and tools, concepts, practices, and is capable of executing any task, whether product-related or communicative.",
+    bio: "Digital designer with 5 years of experience in fintech and IT. I work at the intersection of design and product, and I've long believed that a designer is a professional who understands design as a combination of skills and tools, concepts, and practices, and is capable of doing any kind of work, whether product-related or communicative. That's the principle I've followed throughout my career: I've worked with crypto services, payment systems and acquiring, launched MVPs in a matter of weeks, and built design systems spanning 150+ screens. I've also handled communication work at CROC: conferences with 400-600 slides, brand identity, event graphics, and print. I've worked with teams from Russia, Europe, and South Africa.",
     footerThanks: "Thank you for viewing!",
   },
   cases: [
