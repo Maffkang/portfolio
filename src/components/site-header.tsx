@@ -3,7 +3,16 @@ import { getContent } from "@/data/cases";
 import { MobileSocialMenu } from "@/components/mobile-social-menu";
 import { localizedPath, ui, type Lang } from "@/lib/i18n";
 
-export function SiteHeader({ lang, path }: { lang: Lang; path: string }) {
+export function SiteHeader({
+  lang,
+  path,
+  children,
+}: {
+  lang: Lang;
+  path: string;
+  /** Extra overlay content anchored to the sticky header (e.g. the new-case popup). */
+  children?: React.ReactNode;
+}) {
   const { profile, socialLinks } = getContent(lang);
   const otherLang: Lang = lang === "ru" ? "en" : "ru";
   const switchHref = localizedPath(otherLang, path);
@@ -72,6 +81,7 @@ export function SiteHeader({ lang, path }: { lang: Lang; path: string }) {
           </div>
         </div>
       </div>
+      {children}
     </header>
   );
 }

@@ -1,6 +1,7 @@
 import { CaseCard } from "@/components/case-card";
 import { Hero } from "@/components/hero";
 import { MobileCharacter } from "@/components/mobile-character";
+import { NewCasePopup } from "@/components/new-case-popup";
 import { PinnedCharacter } from "@/components/pinned-character";
 import { ProfileAvatar } from "@/components/profile-avatar";
 import { SiteFooter } from "@/components/site-footer";
@@ -13,7 +14,9 @@ export function HomeView({ lang }: { lang: Lang }) {
 
   return (
     <div className="flex min-h-screen flex-col overflow-x-clip bg-surface font-sans text-body">
-      <SiteHeader lang={lang} path="/" />
+      <SiteHeader lang={lang} path="/">
+        <NewCasePopup lang={lang} />
+      </SiteHeader>
       <main className="mx-auto w-full max-w-[1360px] flex-1 px-6 pb-24 sm:px-10">
         <div className="grid lg:grid-cols-[739px_1fr] lg:gap-8">
           <div className="flex flex-col gap-[72px] pt-10 lg:pt-16">

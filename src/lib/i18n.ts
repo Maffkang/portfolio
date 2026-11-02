@@ -24,6 +24,14 @@ export const ui: Record<
     backToHome: string;
     notFoundHeading: string;
     goHome: string;
+    newCase: {
+      slug: string;
+      label: string;
+      title: string;
+      description: string;
+      cta: string;
+      close: string;
+    };
   }
 > = {
   ru: {
@@ -36,6 +44,14 @@ export const ui: Record<
     backToHome: "← На главную",
     notFoundHeading: "Оооооо нет, страница не найдена, или находится в работе..",
     goHome: "На главную",
+    newCase: {
+      slug: "croc-k2",
+      label: "Новый кейс",
+      title: "CROC, K2 и другие бренды",
+      description: "Конференции, айдентика и печать для CROC, K2 и ещё трёх брендов.",
+      cta: "Посмотреть",
+      close: "Закрыть",
+    },
   },
   en: {
     downloadCv: "Download CV",
@@ -47,5 +63,13 @@ export const ui: Record<
     backToHome: "← Back to home",
     notFoundHeading: "Ooooh no, this page was not found, or is still in progress..",
     goHome: "Go home",
+    newCase: {
+      slug: "croc-k2",
+      label: "New case",
+      title: "CROC, K2 & Other brands",
+      description: "Conferences, brand identity and print for CROC, K2 and three more brands.",
+      cta: "View",
+      close: "Close",
+    },
   },
 };
