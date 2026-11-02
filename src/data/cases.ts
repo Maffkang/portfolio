@@ -331,7 +331,7 @@ const ruContent: Content = {
     name: "Marchenko Andrey",
     legalName: "Марченко Андрей",
     greeting: "Привет! Меня зовут Марченко Андрей",
-    bio: "Цифровой дизайнер с 5 годами опыта в fintech, IT. Работаю на стыке дизайна и продукта, давно убежден в том, что дизайнер - это профессионал который понимает дизайн как совокупность навыков и инструментов, концепций, практик, и способен выполнять любую работу как продуктовую, так и коммуникационную. Именно по этому принципу я и работал всю свою карьеру, успел поработать с крипто-сервисами, платёжными системами и эквайрингом, запускал MVP за считаные недели, строил дизайн-системы на 150+ экранов. Также закрывал коммуникационные задачи в CROC: конференции на 400-600 слайдов, фирменный стиль, ивент-графика, полиграфия. Работал с командами из России, Европы и ЮАР.",
+    bio: "Цифровой дизайнер с 5 годами опыта в fintech и IT. Работаю на стыке дизайна и продукта, давно убеждён, что хороший дизайнер понимает дизайн как совокупность навыков, инструментов, концепций и практик и способен выполнять любую работу: как продуктовую, так и коммуникационную. Именно по этому принципу я и работал всю карьеру: успел поработать с криптосервисами, платёжными системами и эквайрингом, запускал MVP за считаные недели, строил дизайн-системы на 150+ экранов. Также закрывал коммуникационные задачи в CROC: конференции на 400–600 слайдов, фирменный стиль, ивент-графика, полиграфия. Работал с командами из России, Европы и ЮАР.",
     footerThanks: "Спасибо за просмотр!",
   },
   cases: [
@@ -347,7 +347,7 @@ const ruContent: Content = {
       slug: "zippy",
       title: "Zippy (Crypto exchanger)",
       description:
-        "Zippy — сервис покупки и продажи USDT за рубли. Целевая аудитория: люди с минимальным опытом в крипто которым нужно быстро и безопасно купить или продать валюту.",
+        "Zippy — сервис покупки и продажи USDT за рубли. Целевая аудитория: люди с минимальным опытом в крипте, которым нужно быстро и безопасно купить или продать валюту.",
       tags: ["UX/UI", "Mobile", "Crypto", "Product design"],
       cover: zippyCover,
     },
@@ -355,7 +355,7 @@ const ruContent: Content = {
       slug: "travel-card",
       title: "Travel card",
       description:
-        "Сервис оформления зарубежных банковских карт для пользователей из РФ в условиях жёстких сроков, где нужно было быстро собрать понятный и доверительный пользовательский опыт для сложного финансового процесса",
+        "Сервис оформления зарубежных банковских карт для пользователей из РФ в условиях жёстких сроков, где нужно было быстро собрать понятный и доверительный пользовательский опыт для сложного финансового процесса.",
       tags: ["UX/UI", "Product design", "Claude", "AI"],
       cover: travelCardCover,
     },
@@ -373,7 +373,7 @@ const ruContent: Content = {
   caseDetails: {
     cycle: {
       tagline:
-        "Проекты и задачи в рамках компании Cycle Bit, демонстрируя мою роль в продуктовом и UX/UI дизайне.",
+        "Проекты и задачи в Cycle Bit, которые показывают мою роль в продуктовом и UX/UI-дизайне.",
       role: roleLabel,
       tags: cycleTags,
       heroBanner: cycleHeroBanner,
@@ -397,7 +397,7 @@ const ruContent: Content = {
           {
             title: "Проблема",
             paragraphs: [
-              "Интерфейс был построен на основе устаревших устройств, а также фрагментированным и недостаточно консистентным, из-за чего ключевые сценарии работы с платежами были перегружены и не всегда понятны пользователям в реальных операционных условиях.",
+              "Интерфейс был построен под устаревшие устройства, был фрагментированным и недостаточно консистентным. Из-за этого ключевые сценарии работы с платежами были перегружены и не всегда понятны пользователям в реальных операционных условиях.",
             ],
             image: cycleProblemImage,
           },
@@ -416,7 +416,7 @@ const ruContent: Content = {
         "Также обновил процесс регистрации на кассе, упростив вход пользователя в систему, участвовал в доработке раздела учёта остатков и работе с модификаторами товаров, что помогло сделать повседневные операции более понятными и быстрыми.",
       ],
       solutionImage: cycleSolutionImage,
-      accordionHeading: "Работа с внутренними сервисами:",
+      accordionHeading: "Работа с внутренними сервисами",
       accordionItems: [
         {
           title: "Онбординг",
@@ -457,7 +457,7 @@ const ruContent: Content = {
       ],
       resultStatsSection: {
         paragraph:
-          "В результате продукт получил более современный, понятный и целостный интерфейс, где ключевые сценарии стали восприниматься проще и логичнее. Важно, что эффект здесь не только визуальный: за счёт обновлённых пользовательских флоу и внедрения UI Kit продукт стал более устойчивой системой, которую легче поддерживать и масштабировать дальше. Для бизнеса это означает более удобный рабочий инструмент, а для команды более ясную основу для дальнейшей разработки",
+          "В результате продукт получил более современный, понятный и целостный интерфейс, где ключевые сценарии стали восприниматься проще и логичнее. Важно, что эффект здесь не только визуальный: за счёт обновлённых пользовательских флоу и внедрения UI Kit продукт стал более устойчивой системой, которую легче поддерживать и масштабировать дальше. Для бизнеса это означает более удобный рабочий инструмент, а для команды более ясную основу для дальнейшей разработки.",
         stats: [
           {
             value: "150+",
@@ -465,7 +465,7 @@ const ruContent: Content = {
               "экранов переработано и создано с нуля — онбординг, продажи, каталог, заказы, личный кабинет, история операций",
           },
           {
-            value: "5-6",
+            value: "5–6",
             description:
               "шагов в финальном онбординге — сокращён с перегруженного нелинейного сценария",
           },
@@ -477,14 +477,14 @@ const ruContent: Content = {
           {
             value: "6",
             description:
-              "переработаны в рамках одного продукта — онбординг, история транзакций, свободные продажи, каталоги, чеки, заказы",
+              "сервисов переработано в рамках одного продукта — онбординг, история транзакций, свободные продажи, каталоги, чеки, заказы",
           },
         ],
       },
     },
     zippy: {
       tagline:
-        "Сервис покупки и продажи USDT за рубли. Целевая аудитория: люди с минимальным опытом в крипто которым нужно быстро и безопасно купить или продать валюту. Продукт на этапе закрытого MVP-тестирования.",
+        "Сервис покупки и продажи USDT за рубли. Целевая аудитория: люди с минимальным опытом в крипте, которым нужно быстро и безопасно купить или продать валюту. Продукт на этапе закрытого MVP-тестирования.",
       role: roleLabel,
       tags: zippyTags,
       heroBanner: zippyHeroBanner,
@@ -494,15 +494,15 @@ const ruContent: Content = {
           {
             title: "Конкурентный анализ",
             paragraphs: [
-              "Смотрели на Mercuryo и похожие сервисы. Mercuryo хорош минимализмом и скоростью виджета но заточен под встраивание в сторонние продукты, а не под самостоятельное использование. Там нет личного кабинета, истории транзакций, полноценного профиля. Для пользователя который хочет контролировать свои операции это тупик. Zippy должен был закрыть этот gap: такая же простота на входе, но полноценный продукт внутри.",
-              "И Bybit один из самых популярных способов купить USDT за рубли в России. Но это P2P-платформа: покупатель выбирает продавца из списка, договаривается об условиях, ждёт подтверждения вручную. Для опытного пользователя нормально. Для человека который покупает крипту впервые стресс: непонятно кому доверять, непонятно что делать если что-то пошло не так, нет ощущения что тебя кто-то страхует.",
+              "Смотрели на Mercuryo и похожие сервисы. Mercuryo хорош минимализмом и скоростью виджета, но заточен под встраивание в сторонние продукты, а не под самостоятельное использование. Там нет личного кабинета, истории транзакций, полноценного профиля. Для пользователя, который хочет контролировать свои операции это тупик. Zippy должен был закрыть этот gap: такая же простота на входе, но полноценный продукт внутри.",
+              "Ещё один ориентир: Bybit, один из самых популярных способов купить USDT за рубли в России. Но это P2P-платформа: покупатель выбирает продавца из списка, договаривается об условиях, ждёт подтверждения вручную. Для опытного пользователя нормально. Для человека, который покупает крипту впервые, такой процесс превращается в стресс: непонятно, кому доверять, непонятно, что делать, если что-то пошло не так, и нет ощущения, что тебя кто-то страхует.",
             ],
           },
           {
             title: "Проблема",
             paragraphs: [
               "Задача состояла в том, чтобы разработать автономный продукт для обмена криптовалют, который позволял бы пользователям быстро конвертировать рубли в криптовалюту.",
-              "Основная задача состояла в том, чтобы справиться со сложностью и временными ограничениями обмена фиата на криптовалюту на современном рынке, сохраняя при этом простоту и интуитивно понятный интерфейс для широкой аудитории, включая пользователей с небольшим опытом работы в сфере криптографии или вообще без него. В то же время интерфейс должен был обеспечивать ясность и доверие на каждом этапе процесса.",
+              "Основная задача состояла в том, чтобы справиться со сложностью и временными ограничениями обмена фиата на криптовалюту на современном рынке, сохраняя при этом простоту и интуитивно понятный интерфейс для широкой аудитории, включая пользователей с небольшим опытом в криптовалюте или вообще без него. В то же время интерфейс должен был обеспечивать ясность и доверие на каждом этапе процесса.",
             ],
             image: zippyFlowImage,
           },
@@ -511,7 +511,7 @@ const ruContent: Content = {
       solutionHeading: "Решение и процесс",
       solutionParagraphs: [
         "Я упростил основной поток обмена, сократив его до минимального количества шагов, сделав процесс быстрым, линейным и предсказуемым.",
-        "Разработал пользовательские потоки, ключевые экраны и дополнительные возможности, чтобы пользователи всегда понимали, что происходит на каждом этапе. Параллельно я создал набор пользовательского интерфейса для обеспечения согласованности и поддержки будущих разработок, уделяя особое внимание тому, как представляются суммы, ставки и сборы.",
+        "Разработал пользовательские потоки, ключевые экраны и дополнительные возможности, чтобы пользователи всегда понимали, что происходит на каждом этапе. Параллельно я создал UI Kit для обеспечения согласованности и поддержки будущих разработок, уделяя особое внимание тому, как представляются суммы, ставки и сборы.",
       ],
       solutionImage: zippyUiKitImage,
       accordionHeading: "Экраны и результат",
@@ -529,7 +529,7 @@ const ruContent: Content = {
           images: zippyAccordionImages.profile,
         },
         {
-          title: "KYS",
+          title: "KYC",
           description:
             "Самый тревожный момент в крипто-продукте когда просят документы. Задача была не убрать этот шаг, а сделать так чтобы он не пугал. Верификация разбита на четыре последовательных шага: почта, страна, фото паспорта, селфи. Каждый шаг один экран, одно действие. Пользователь всегда знает где находится и что будет дальше.",
           images: zippyAccordionImages.kys,
@@ -553,20 +553,20 @@ const ruContent: Content = {
           images: zippyAccordionImages.statuses,
         },
         {
-          title: "Email уведомления",
+          title: "Email-уведомления",
           description:
             "Два типа писем: код подтверждения при входе и детали транзакции после обмена. Минимум но по делу пользователь получает только то что нужно в нужный момент, без лишнего шума.",
           images: zippyAccordionImages.email,
         },
       ],
       resultParagraphs: [
-        "В результате получается понятный интерфейс, который упрощает сложные финансовые процессы. Виджет легко интегрируется в банковскую среду, не нарушая ее логику.",
-        "Упрощенные потоки и прозрачная информация помогают пользователям принимать решения с большей уверенностью. Проект также позволил быстро запустить MVP и заложил прочную основу для будущего масштабирования благодаря хорошо структурированному пользовательскому интерфейсу и системе дизайна.",
+        "В результате получился понятный интерфейс, который упрощает сложные финансовые процессы. Виджет легко интегрируется в банковскую среду, не нарушая её логику.",
+        "Упрощённые потоки и прозрачная информация помогают пользователям принимать решения с большей уверенностью. Проект также позволил быстро запустить MVP и заложил прочную основу для будущего масштабирования благодаря хорошо структурированному пользовательскому интерфейсу и дизайн-системе.",
       ],
     },
     "travel-card": {
       tagline:
-        "Запуск сервиса оформления зарубежных банковских карт для пользователей из РФ в условиях жёстких сроков, где нужно было быстро собрать понятный и доверительный пользовательский опыт для сложного финансового процесса",
+        "Запуск сервиса оформления зарубежных банковских карт для пользователей из РФ в условиях жёстких сроков, где нужно было быстро собрать понятный и доверительный пользовательский опыт для сложного финансового процесса.",
       role: roleLabel,
       tags: travelCardTags,
       heroBanner: travelCardHeroBanner,
@@ -582,7 +582,7 @@ const ruContent: Content = {
           {
             title: "Проблема",
             paragraphs: [
-              "Продукт решает нетривиальную задачу — оформление зарубежных банковских карт для пользователей из РФ, где процесс сам по себе сложный, многошаговый и требует доверия. При этом запуск нужно было сделать максимально быстро, без долгого ресёрча и классического продуктового цикла. Не было готовой дизайн-системы, структуры продукта и проверенных сценариев, всё нужно было собирать параллельно с разработкой. Главное было упростить сложный финансовый процесс и упаковать его в понятный пользовательский путь в условиях жёстких сроков.",
+              "Продукт решает нетривиальную задачу — оформление зарубежных банковских карт для пользователей из РФ, где процесс сам по себе сложный, многошаговый и требует доверия. При этом запуск нужно было сделать максимально быстро, без долгого ресёрча и классического продуктового цикла. Не было готовой дизайн-системы, структуры продукта и проверенных сценариев: всё нужно было собирать параллельно с разработкой. Главной задачей было упростить сложный финансовый процесс и упаковать его в понятный пользовательский путь в условиях жёстких сроков.",
             ],
           },
         ],
@@ -632,7 +632,7 @@ const ruContent: Content = {
         heading: "Решение",
         approachTitle: "Подход",
         approachParagraphs: [
-          "Выстроил личную систему производства: шаблоны, компонентная база, единые принципы адаптации под разные бренды. Это сократило время на типовые задачи и освободило голову для нетиповых. На конференциях жёсткое планирование по блокам, приоритизация экранов по видимости. На продукте полный цикл от исследования до передачи, без дизайн-лида над собой.",
+          "Выстроил личную систему производства: шаблоны, компонентная база, единые принципы адаптации под разные бренды. Это сократило время на типовые задачи и освободило голову для нетиповых. На конференциях работал по жёсткому плану: разбивка по блокам и приоритет экранов по видимости. На продукте вёл полный цикл от исследования до передачи в разработку, без дизайн-лида над собой.",
         ],
         resultTitle: "Результат",
         stats: crocApproachResultStats,
@@ -644,7 +644,7 @@ const ruContent: Content = {
             kind: "grid",
             title: "Ежегодная IT-конференция Orion Digital Race",
             description:
-              "2000+ участников, спикеры из Positive Technologies, Газпром нефть, Т-Банка, X5 Group. Материалы идут на большой экран перед залом из топ-менеджеров рынка. Закрыл визуальный дизайн в одиночку: ~400 слайдов + цифровые визуалы для офлайн-сцены. Концепт «гонки» проходил через все форматы от заставок треков до слайдов спикеров.",
+              "2000+ участников, спикеры из Positive Technologies, Газпром нефть, Т-Банка, X5 Group. Материалы идут на большой экран перед залом из топ-менеджеров рынка. Закрыл визуальный дизайн в одиночку: ~400 слайдов и цифровые визуалы для офлайн-сцены. Концепт «гонки» проходил через все форматы: от заставок треков до слайдов спикеров.",
             images: crocOrionImages,
             desktopColumns: 4,
           },
@@ -668,9 +668,9 @@ const ruContent: Content = {
             kind: "grid",
             title: "Конференции Demo Day",
             description:
-              "Внутренняя конференция компании, 100+ слайдов, прямое взаимодействие с топ-менеджментом компании",
+              "Внутренняя конференция компании: 100+ слайдов и прямая работа с топ-менеджментом.",
             secondaryDescription:
-              "(к сожалению, показать слайды нельзя в силу строго НДА)",
+              "(К сожалению, слайды показать нельзя из-за строгого NDA.)",
             images: crocDemoDayImages,
             desktopColumns: 4,
             blurImages: true,
@@ -692,7 +692,7 @@ const ruContent: Content = {
           },
           {
             kind: "grid",
-            title: "Материалы в социальные сети",
+            title: "Материалы для социальных сетей",
             description:
               "Серия постов для K2 Кибербезопасность: экспертные разборы, цитаты спикеров, анонсы и праздничные посты. Держал единый визуальный язык для всей серии, от сложных технических тем до лёгкого контента.",
             images: crocSocialImages,
@@ -708,8 +708,8 @@ const enContent: Content = {
   profile: {
     name: "Marchenko Andrey",
     legalName: "Marchenko Andrey",
-    greeting: "Hello! My name is Marchenko Andrey",
-    bio: "Digital designer with 5 years of experience in fintech and IT. I work at the intersection of design and product, and I've long believed that a designer is a professional who understands design as a combination of skills and tools, concepts, and practices, and is capable of doing any kind of work, whether product-related or communicative. That's the principle I've followed throughout my career: I've worked with crypto services, payment systems and acquiring, launched MVPs in a matter of weeks, and built design systems spanning 150+ screens. I've also handled communication work at CROC: conferences with 400-600 slides, brand identity, event graphics, and print. I've worked with teams from Russia, Europe, and South Africa.",
+    greeting: "Hi! I'm Andrey Marchenko",
+    bio: "Digital designer with 5 years of experience in fintech and IT. I work at the intersection of design and product, and I've long believed that a designer is a professional who understands design as a combination of skills and tools, concepts, and practices, and is capable of doing any kind of work, whether product or communication design. That's the principle I've followed throughout my career: I've worked with crypto services, payment systems and acquiring, launched MVPs in a matter of weeks, and built design systems spanning 150+ screens. I've also handled communication work at CROC: conferences with 400–600 slides, brand identity, event graphics, and print. I've worked with teams from Russia, Europe, and South Africa.",
     footerThanks: "Thank you for viewing!",
   },
   cases: [
@@ -717,7 +717,7 @@ const enContent: Content = {
       slug: "cycle",
       title: "Cycle (Acquire POS)",
       description:
-        "I worked at the intersection of the product team, development, and business direction. I interacted with product managers, backend and embedded developers, as well as participants responsible for the payment infrastructure.",
+        "I worked at the intersection of the product team, development, and business side. I interacted with product managers, backend and embedded developers, as well as people responsible for the payment infrastructure.",
       tags: ["UX/UI", "Product design", "Fintech"],
       cover: cycleCover,
     },
@@ -755,13 +755,13 @@ const enContent: Content = {
       role: roleLabel,
       tags: cycleTags,
       heroBanner: cycleHeroBanner,
-      introHeading: "Introductions",
+      introHeading: "Background",
       introRows: [
         [
           {
             title: "Context and specifics",
             paragraphs: [
-              "I worked at the intersection of the product team, development, and business direction. I interacted with product managers, backend and embedded developers, as well as participants responsible for payment infrastructure and merchant operational processes.",
+              "I worked at the intersection of the product team, development, and business side. I interacted with product managers, backend and embedded developers, as well as people responsible for payment infrastructure and merchant operational processes.",
             ],
           },
           {
@@ -775,7 +775,7 @@ const enContent: Content = {
           {
             title: "Problem",
             paragraphs: [
-              "The interface was built on outdated devices, and was also fragmented and insufficiently consistent, causing key payment workflows to be overloaded and not always clear to users in real operational conditions.",
+              "The interface was designed for outdated devices and was fragmented and inconsistent, which made key payment workflows overloaded and not always clear to users in real operational conditions.",
             ],
             image: cycleProblemImage,
           },
@@ -789,8 +789,8 @@ const enContent: Content = {
       ],
       solutionHeading: "Solution",
       solutionParagraphs: [
-        "The main focus of the work was to rebuild the interface system around real user tasks. I redesigned key flows, restructured the logic of screens and states, updated the visual system, and laid a more unified approach to components through the UI Kit.",
-        "I redesigned key user scenarios, simplified the interface logic, and updated the product's visual system. Additionally, I implemented a UI Kit to establish consistent patterns and simplify product development. I also designed and implemented new product scenarios related to tips: added the ability to set default tips linked to the device and synchronized with the personal account, realized tips as a separate entity in receipts and accounting. I worked on their display in details, reports, and total amounts, return scenarios with tips, custom values, receipt printing, and a separate section in the personal account with statistics and analytics.",
+        "The main focus of the work was to rebuild the interface system around real user tasks. I redesigned key flows, restructured the logic of screens and states, updated the visual system, and established a more unified approach to components through the UI Kit.",
+        "I redesigned key user scenarios, simplified the interface logic, and updated the product's visual system. Additionally, I implemented a UI Kit to establish consistent patterns and simplify product development. I also designed and implemented new product scenarios related to tips: added the ability to set default tips linked to the device and synchronized with the personal account, implemented tips as a separate entity in receipts and accounting. I worked on their display in details, reports, and total amounts, return scenarios with tips, custom values, receipt printing, and a separate section in the personal account with statistics and analytics.",
         "I also updated the registration process at the checkout, simplifying user entry into the system, participated in refining the inventory accounting section and working with product modifiers, which helped make everyday operations clearer and faster.",
       ],
       solutionImage: cycleSolutionImage,
@@ -843,7 +843,7 @@ const enContent: Content = {
               "screens redesigned and created from scratch — onboarding, sales, catalog, orders, personal account, transaction history",
           },
           {
-            value: "5-6",
+            value: "5–6",
             description:
               "steps in the final onboarding — reduced from an overloaded non-linear scenario",
           },
@@ -855,7 +855,7 @@ const enContent: Content = {
           {
             value: "6",
             description:
-              "redesigned within a single product — onboarding, transaction history, free sales, catalogs, receipts, orders",
+              "services redesigned within a single product — onboarding, transaction history, free sales, catalogs, receipts, orders",
           },
         ],
       },
@@ -866,14 +866,14 @@ const enContent: Content = {
       role: roleLabel,
       tags: zippyTags,
       heroBanner: zippyHeroBanner,
-      introHeading: "Introductions",
+      introHeading: "Background",
       introRows: [
         [
           {
             title: "Competitive analysis",
             paragraphs: [
               "We looked at Mercuryo and similar services. Mercuryo is good for its minimalism and the speed of its widget, but it is designed for integration into third-party products rather than standalone use. There is no personal account, transaction history, or full profile. For a user who wants to control their operations, this is a dead end. Zippy was meant to fill this gap: the same simplicity at the entry point, but a complete product inside.",
-              "And Bybit is one of the most popular ways to buy USDT for rubles in Russia. But it is a P2P platform: the buyer chooses a seller from a list, negotiates the terms, and waits for manual confirmation. This is fine for an experienced user. For someone buying crypto for the first time, it's stressful: it's unclear whom to trust, what to do if something goes wrong, and there's no sense that someone is backing you up.",
+              "Bybit is also one of the most popular ways to buy USDT for rubles in Russia. But it is a P2P platform: the buyer chooses a seller from a list, negotiates the terms, and waits for manual confirmation. This is fine for an experienced user. For someone buying crypto for the first time, it's stressful: it's unclear whom to trust, what to do if something goes wrong, and there's no sense that someone is backing you up.",
             ],
           },
           {
@@ -889,7 +889,7 @@ const enContent: Content = {
       solutionHeading: "Solution and process",
       solutionParagraphs: [
         "I simplified the main exchange flow, reducing it to the minimum number of steps, making the process fast, linear, and predictable.",
-        "I developed user flows, key screens, and additional features so that users always understood what was happening at each stage. At the same time, I created a UI kit to ensure consistency and support future developments, paying special attention to how amounts, rates, and fees are presented.",
+        "I developed user flows, key screens, and additional features so that users always understood what was happening at each stage. At the same time, I created a UI kit to ensure consistency and support future development, paying special attention to how amounts, rates, and fees are presented.",
       ],
       solutionImage: zippyUiKitImage,
       accordionHeading: "Screens and results",
@@ -907,7 +907,7 @@ const enContent: Content = {
           images: zippyAccordionImages.profile,
         },
         {
-          title: "KYS",
+          title: "KYC",
           description:
             "The most alarming moment in a crypto product is when documents are requested. The task was not to eliminate this step but to ensure it does not scare users. Verification is broken down into four sequential steps: email, country, passport photo, selfie. Each step is one screen, one action. The user always knows where they are and what will happen next.",
           images: zippyAccordionImages.kys,
@@ -938,8 +938,8 @@ const enContent: Content = {
         },
       ],
       resultParagraphs: [
-        "As a result, a clear interface is created that simplifies complex financial processes. The widget easily integrates into the banking environment without disrupting its logic.",
-        "Simplified flows and transparent information help users make decisions with greater confidence. The project also allowed for a quick MVP launch and laid a solid foundation for future scaling due to a well-structured user interface and design system.",
+        "The result is a clear interface that simplifies complex financial processes. The widget easily integrates into the banking environment without disrupting its logic.",
+        "Simplified flows and transparent information help users make decisions with greater confidence. The project also allowed for a quick MVP launch and laid a solid foundation for future scaling thanks to a well-structured user interface and design system.",
       ],
     },
     "travel-card": {
@@ -948,13 +948,13 @@ const enContent: Content = {
       role: roleLabel,
       tags: travelCardTags,
       heroBanner: travelCardHeroBanner,
-      introHeading: "Input data",
+      introHeading: "Background",
       introRows: [
         [
           {
             title: "My role and contribution",
             paragraphs: [
-              "I was responsible for product design from scratch: from the initial concepts to handing over layouts for development under tight deadlines. I joined the project at a stage when it was necessary to quickly assemble a working MVP, and I built key user scenarios, the interface, and the visual logic of the product. I created a rough interface foundation using AI tools, after which I refined it manually and prepared it for production. I completed the entire design outline in 7–10 days: main screens, forms, banners, and communication materials.",
+              "I was responsible for product design from scratch: from the initial concepts to handing over layouts for development under tight deadlines. I joined the project at a stage when it was necessary to quickly assemble a working MVP, and I built key user scenarios, the interface, and the visual logic of the product. I created a rough interface foundation using AI tools, after which I refined it manually and prepared it for production. I covered the entire design scope in 7–10 days: main screens, forms, banners, and communication materials.",
             ],
           },
           {
@@ -989,13 +989,13 @@ const enContent: Content = {
       role: crocDigitalDesignerRole,
       tags: crocTags,
       heroBanner: crocHeroBanner,
-      introHeading: "Introductions",
+      introHeading: "Background",
       introRows: [
         [
           {
             title: "My role and contribution",
             paragraphs: [
-              "I went from intern to lead designer on a dedicated product. I owned the company's visual production for itself and its clients: corporate presentations, branding, conferences, digital and print. In parallel, I led product work: designed the interface of an AI product from scratch as the sole designer on the team.",
+              "I went from intern to lead designer on a dedicated product. I owned visual production for the company and its clients: corporate presentations, branding, conferences, digital and print. In parallel, I led product work: designed the interface of an AI product from scratch as the sole designer on the team.",
             ],
           },
           {
@@ -1010,7 +1010,7 @@ const enContent: Content = {
         heading: "Solution",
         approachTitle: "Approach",
         approachParagraphs: [
-          "I built a personal production system: templates, a component base, and unified principles for adapting to different brands. This cut the time spent on routine tasks and freed up headspace for the non-routine ones. For conferences, strict block-by-block planning and prioritizing screens by visibility. For the product, the full cycle from research to handoff, with no design lead above me.",
+          "I built a personal production system: templates, a component base, and unified principles for adapting to different brands. This cut the time spent on routine tasks and freed up headspace for the non-routine ones. For conferences, I worked to a strict block-by-block plan and prioritized screens by visibility. For the product, I ran the full cycle from research to handoff, with no design lead above me.",
         ],
         resultTitle: "Result",
         stats: crocApproachResultStatsEn,
@@ -1048,7 +1048,7 @@ const enContent: Content = {
             description:
               "An internal company conference, 100+ slides, direct interaction with the company's top management.",
             secondaryDescription:
-              "(unfortunately, the slides can't be shown due to a strict NDA)",
+              "(Unfortunately, the slides can't be shown due to a strict NDA.)",
             images: crocDemoDayImages,
             desktopColumns: 4,
             blurImages: true,
