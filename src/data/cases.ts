@@ -363,7 +363,7 @@ const ruContent: Content = {
       slug: "croc-k2",
       title: "CROC, K2 & Other brands",
       description:
-        "4 года визуального производства в enterprise-среде: конференции, айдентика, презентации, мероприятия. Работа в команде, много брендов, большой поток.",
+        "3+ года визуального производства в enterprise-среде: конференции, айдентика, презентации, мероприятия. Работа в команде, много брендов, большой поток.",
       tags: ["Communication design", "IT", "AI", "UX/UI", "Product design"],
       cover: crocCover,
     },
@@ -560,7 +560,7 @@ const ruContent: Content = {
         },
       ],
       resultParagraphs: [
-        "В результате получился понятный интерфейс, который упрощает сложные финансовые процессы. Виджет легко интегрируется в банковскую среду, не нарушая её логику.",
+        "В результате получился понятный интерфейс, который упрощает сложные финансовые процессы. Пользователь видит курс, комиссию и итоговую сумму до подтверждения и всегда знает статус своей операции.",
         "Упрощённые потоки и прозрачная информация помогают пользователям принимать решения с большей уверенностью. Проект также позволил быстро запустить MVP и заложил прочную основу для будущего масштабирования благодаря хорошо структурированному пользовательскому интерфейсу и дизайн-системе.",
       ],
     },
@@ -589,7 +589,7 @@ const ruContent: Content = {
       ],
       roleResultSection: {
         heading: "Решение",
-        roleTitle: "Моя роль и вклад",
+        roleTitle: "Что я сделал",
         roleList: [
           "Быстро собрал черновую визуальную основу продукта с помощью AI, чтобы сократить время на старт и сразу перейти к рабочему направлению",
           "Доработал интерфейс вручную: уточнил структуру экранов, пользовательские сценарии и привёл всё к цельному и понятному виду",
@@ -607,7 +607,7 @@ const ruContent: Content = {
     },
     "croc-k2": {
       tagline:
-        "4+ года визуального производства в enterprise-среде: конференции, айдентика, презентации, мероприятия. Работа в команде, много брендов, большой поток.",
+        "3+ года визуального производства в enterprise-среде: конференции, айдентика, презентации, мероприятия. Работа в команде, много брендов, большой поток.",
       role: crocDigitalDesignerRole,
       tags: crocTags,
       heroBanner: crocHeroBanner,
@@ -666,7 +666,7 @@ const ruContent: Content = {
           },
           {
             kind: "grid",
-            title: "Конференции Demo Day",
+            title: "Конференция Demo Day",
             description:
               "Внутренняя конференция компании: 100+ слайдов и прямая работа с топ-менеджментом.",
             secondaryDescription:
@@ -741,7 +741,7 @@ const enContent: Content = {
       slug: "croc-k2",
       title: "CROC, K2 & Other brands",
       description:
-        "4 years of visual production in an enterprise environment: conferences, branding, presentations, events. Teamwork, many brands, high volume.",
+        "3+ years of visual production in an enterprise environment: conferences, branding, presentations, events. Teamwork, many brands, high volume.",
       tags: ["Communication design", "IT", "AI", "UX/UI", "Product design"],
       cover: crocCover,
     },
@@ -938,7 +938,7 @@ const enContent: Content = {
         },
       ],
       resultParagraphs: [
-        "The result is a clear interface that simplifies complex financial processes. The widget easily integrates into the banking environment without disrupting its logic.",
+        "The result is a clear interface that simplifies complex financial processes. Users see the rate, fee and final amount before confirming and always know the status of their transaction.",
         "Simplified flows and transparent information help users make decisions with greater confidence. The project also allowed for a quick MVP launch and laid a solid foundation for future scaling thanks to a well-structured user interface and design system.",
       ],
     },
@@ -967,7 +967,7 @@ const enContent: Content = {
       ],
       roleResultSection: {
         heading: "Solution",
-        roleTitle: "My role and contribution",
+        roleTitle: "What I did",
         roleList: [
           "Quickly assembled a rough visual foundation of the product using AI to reduce startup time and immediately move to a working direction.",
           "Refined the interface manually: clarified screen structure, user scenarios, and brought everything to a cohesive and understandable appearance.",
@@ -985,7 +985,7 @@ const enContent: Content = {
     },
     "croc-k2": {
       tagline:
-        "4+ years of visual production in an enterprise environment: conferences, branding, presentations, events. Teamwork, many brands, high volume.",
+        "3+ years of visual production in an enterprise environment: conferences, branding, presentations, events. Teamwork, many brands, high volume.",
       role: crocDigitalDesignerRole,
       tags: crocTags,
       heroBanner: crocHeroBanner,
@@ -1044,7 +1044,7 @@ const enContent: Content = {
           },
           {
             kind: "grid",
-            title: "Demo Day conferences",
+            title: "Demo Day conference",
             description:
               "An internal company conference, 100+ slides, direct interaction with the company's top management.",
             secondaryDescription:
